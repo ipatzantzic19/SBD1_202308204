@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="86DB54B7-760D-BE83-DBC5-40C3DD127870" name="INSTRUCTOR">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>CD47ED94-A963-977B-C98B-0FC7C262A6D4</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_instructor" id="5643B27F-7FB4-7FC9-4015-55AB1D3274B5">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>FA7DD291-5CA9-C08C-4E5F-B35106172CAD</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="7AC47589-0B61-1A45-F73E-23EC2C195AD8">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>AB1D0036-5603-5AA2-F3BE-DF5F05391077</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 CHAR</dataTypeSize>
+<ownDataTypeParameters>150 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dpi" id="6350CB20-592E-C61B-0708-0410BA78366A">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>04C12F61-095E-E51D-E54F-EF9600C133CD</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fec_creacion" id="39259892-66B2-E9FA-8517-8B84600AA870">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>148F6E29-66B5-80A1-015D-4E583F75CB42</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B7069B5B-9D4C-CF83-17D6-3728AFED9044" name="INSTRUCTOR_PK">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>74FD313F-55B9-F22C-3E73-4F2FD9F31D5E</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5643B27F-7FB4-7FC9-4015-55AB1D3274B5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

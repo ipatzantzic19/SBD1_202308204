@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FC466BB1-86B7-2A57-4BF2-167B0C4AA266" name="Relation_5">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ESCUELA_id_escuela" id="F81C4536-D59C-B7C1-7125-1DD6AFA4C14F">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4B9C0F8B-3252-2C71-7C99-98082A8B3E2D" referredColumn="60814E2B-053F-6B01-B113-BBF4A08FF9B2"/>
+</associations>
+</Column>
+<Column name="ESC_CENTRO_id_esc_centro" id="A55D5D9E-B7A2-1D89-C9F5-ABBF71EC7150">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FA88494B-5DB4-6374-8263-E5711FE241AE" referredColumn="D84B4423-F323-A692-4A7A-7B64C4E2A764"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5AB2672C-2324-454E-7C79-8B11F97CB3CC" name="Relation_5_PK">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F81C4536-D59C-B7C1-7125-1DD6AFA4C14F"/>
+<colUsage columnID="A55D5D9E-B7A2-1D89-C9F5-ABBF71EC7150"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="89D67F65-D7E7-4D35-6F3B-ECF1A260EC5B" name="Relation_5_ESCUELA_FK">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>938E88A8-8C48-5629-8D64-EE82C6DBFB88</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F81C4536-D59C-B7C1-7125-1DD6AFA4C14F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="12A6C5D9-D30B-7F45-1451-37AB2BB779B4" name="Relation_5_ESC_CENTRO_FK">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>938E88A8-8C48-5629-8D64-EE82C6DBFB88</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A55D5D9E-B7A2-1D89-C9F5-ABBF71EC7150"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,4 +1,37 @@
-**/*.localz
+# --- Sistema operativo / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# --- Temporales y caché ---
+*.tmp
+*.temp
+*.bak
+*.log
+*.cache
+
+# --- Metadatos locales del modelador (no necesarios en repo) ---
 **/*.local
+
+# --- Documentación/archivos pesados opcionales ---
+Document/
+
+# --- Binarios pesados comunes ---
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.iso
+*.bin
+*.psd
+*.ai
+*.mp4
+*.mov
+*.avi
+*.mkv
+**/*.localz
 **/*.git
 **/*.DS_Store

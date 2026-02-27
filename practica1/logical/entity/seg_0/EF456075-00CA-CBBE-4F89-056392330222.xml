@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EF456075-00CA-CBBE-4F89-056392330222" name="INSTR_PRACTICA">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 02:46:09 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<engineerTo>
+<item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_instruccion" id="3C5E4A3E-65EB-D1E1-4EBF-32CBF3391FFE">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 02:46:14 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<engineerTo>
+<item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descripcion" id="7859CA4B-AA1F-A3DD-757B-71478363C777">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 02:46:25 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<engineerTo>
+<item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fec_creacion" id="2A70525B-0EFC-928E-D0AB-59A3EAA3C113">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 02:46:48 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<engineerTo>
+<item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_usuario_reg" id="8DDBDEEB-88FC-8392-ACCD-AF613E6E36B1">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 02:47:01 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<engineerTo>
+<item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="16B9FA23-EF13-88CB-C60C-242438122277" name="INSTR_PRACTICA PK">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 02:46:23 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<engineerTo>
+<item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3C5E4A3E-65EB-D1E1-4EBF-32CBF3391FFE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

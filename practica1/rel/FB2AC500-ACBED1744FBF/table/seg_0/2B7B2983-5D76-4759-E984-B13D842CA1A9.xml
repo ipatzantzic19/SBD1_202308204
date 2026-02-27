@@ -1,0 +1,193 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2B7B2983-5D76-4759-E984-B13D842CA1A9" name="USUARIO">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>CC92B742-98A1-4733-1959-6EBE94B5775A</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_usuario" id="E2691B57-9588-9AA4-2A51-E269D010D27D">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>65BEBAD6-1967-EE2F-2200-A3D5E542B135</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="8EADE1B3-9E80-214F-1E7B-56B13F157733">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>C774D85C-EC2F-72E7-21FB-4D74347BA00F</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 CHAR</dataTypeSize>
+<ownDataTypeParameters>150 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dpi" id="8ECB12ED-C16E-72DB-DAC7-D4F4FC95175E">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>3AE49969-6161-8A52-3464-CF3BB82096DB</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="usuario_acc" id="BE4F5D7D-A04F-2380-C801-B2D44D927BE8">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>260E4A1F-F459-3A48-33B2-860CA83C8C98</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fec_creacion" id="7FC33CB4-AF29-235B-9D1E-628D3B0ED2F5">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>DF2B0D06-2E58-1589-0D4F-4D43F8BF9845</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CENTRO_id_centro" id="F0AE61D5-4886-A138-0364-06CEDDC3548F">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>15BA9FD4-955A-F0CF-63F6-287FD439E47F</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F24ADED1-811E-97B1-DAC3-F866623DF306" referredColumn="61B6DBD8-9768-9BCE-465C-3E56BF5B629E"/>
+</associations>
+</Column>
+<Column name="ESCUELA_id_escuela" id="807F18C1-A9AB-A182-3C89-86734634241F">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>F1A31148-0834-F675-A5D0-559CC3B0F884</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0F4ECF77-01AF-0696-5D96-60541D0E866F" referredColumn="60814E2B-053F-6B01-B113-BBF4A08FF9B2"/>
+</associations>
+</Column>
+<Column name="PERSONA_id_persona" id="13D5531E-0EFD-006C-88FD-C78C4A306FCF">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>7E1E119F-284A-AB90-BB62-96981FF9BE0E</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FBC4EC0B-EFF0-4831-B087-4E0A0CC2C06A" referredColumn="9EA9A06E-BB14-7CDA-E493-219495A47515"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8D47A8E6-CC55-9DC4-B939-7249D1081E14" name="USUARIO_PK">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>23A0FE91-DC55-F9E7-5DFB-79908A45CE08</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E2691B57-9588-9AA4-2A51-E269D010D27D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="01A02ABD-D712-2F4B-3BCE-97979EFB0DD6" name="USUARIO__IDX">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>29FB3495-810A-E12C-4987-0165F476B9E4</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="F0AE61D5-4886-A138-0364-06CEDDC3548F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="949BE39D-583A-B3F9-6106-D494898468F8" name="USUARIO__IDXv1">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>616C49BE-2950-FF52-8389-6452BF91332F</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="807F18C1-A9AB-A182-3C89-86734634241F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="56134A67-15C5-EA2C-32E3-9350E3C1A4DE" name="USUARIO__IDXv2">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>DDD1AAA9-7409-4700-C25D-1171F686B466</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="13D5531E-0EFD-006C-88FD-C78C4A306FCF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E48377A8-4712-2AE7-DC72-3F173D55037B" name="USUARIO_CENTRO_FK">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>29FB3495-810A-E12C-4987-0165F476B9E4</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F0AE61D5-4886-A138-0364-06CEDDC3548F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FD2BFC0E-300D-040E-B536-4006BC6B968E" name="USUARIO_ESCUELA_FK">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>616C49BE-2950-FF52-8389-6452BF91332F</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="807F18C1-A9AB-A182-3C89-86734634241F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3EECFB60-850E-CBAE-6200-040FD6F35BB5" name="USUARIO_PERSONA_FK">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>DDD1AAA9-7409-4700-C25D-1171F686B466</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13D5531E-0EFD-006C-88FD-C78C4A306FCF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

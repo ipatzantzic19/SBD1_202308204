@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E843B87F-C961-D71B-82C1-DB29F2EAABB3" name="MUNICIPIO">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>96479E3E-7DC5-6ABF-D49D-6067A48C83A9</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_municipio" id="EF71361D-1672-B31F-7761-31B7570A34A5">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>E003C6B2-47E8-BEFF-E9B3-ABA9F8DAEBEB</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="844FA6B0-9DB0-5422-7EEA-D33F5478E8A7">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>68118727-0CF5-179A-8DE7-C58E1D35B2C1</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_depto" id="A19A7260-646C-4388-377B-41EA35FBBFFA">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>7EEEEE1E-1CDB-68E6-8D24-33B4D7698D13</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PERSONA_id_persona" id="7C17134C-FF90-74A1-782A-4E123ADC68A9">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>77E4B349-4CD6-A4F4-61D6-110F20B3E947</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="24F60B5A-605E-C919-1C50-59B1177B27AC" referredColumn="9EA9A06E-BB14-7CDA-E493-219495A47515"/>
+</associations>
+</Column>
+<Column name="DEPTO_id_depto" id="0D6A3AED-5DBB-8BA6-C19A-3B1EEFAF08A9">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>C5A777AE-4ACE-048D-7682-5DD659F1695F</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="190B48CF-CC4A-196C-DF1B-AF5960266DEB" referredColumn="976A3672-7B97-91CE-8EE1-D6BD6AF40A71"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C6B29A91-CE2C-852C-3630-02D8575F392D" name="MUNICIPIO_PK">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>839FBBA7-4AE8-AD3D-A7A0-1A4B0619DDC5</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EF71361D-1672-B31F-7761-31B7570A34A5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4C0B64F5-24A8-9F6C-03A1-4F0BFAF86974" name="MUNICIPIO__IDX">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>1AE6951C-DAE3-25D2-9380-2469DAC45F47</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="7C17134C-FF90-74A1-782A-4E123ADC68A9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E3D6DB98-3FEB-2E42-1BAC-73C0FEC067C5" name="MUNICIPIO_DEPTO_FK">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>31611CDC-0883-FB5D-AF68-FEEDAD4E4247</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0D6A3AED-5DBB-8BA6-C19A-3B1EEFAF08A9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="15ED80D4-0CF1-6615-CBC0-E4359FBDB449" name="MUNICIPIO_PERSONA_FK">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>1AE6951C-DAE3-25D2-9380-2469DAC45F47</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C17134C-FF90-74A1-782A-4E123ADC68A9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D32175C2-231D-F0E7-D53A-85A2605A42CB" name="EVAL_INSTR">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>226F7A85-CF69-E8F0-3AA8-8B5AAA075EB0</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_eval_instr" id="E17A9A21-1E58-3B0E-D981-29B7AEF6AAE9">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>8EE7FCCD-461B-3C78-5CA8-66F499681890</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_evaluacion" id="7C33B88F-F87D-B7D8-44BE-D78EAD991C34">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>9A24F19B-3711-59AA-DFD0-4A8EA3BFC60D</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_instruccion" id="9C56AC0C-5303-DE8A-A2FB-942F18E02451">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>41C815F7-4B96-DFA4-E9AD-2376F94C0D0F</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cumplida" id="B4A2D692-399B-C525-338B-BFBBA7EB9BB8">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>7D789B29-0B32-EB4A-8C64-9771274FD2BC</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EVALUACION_id_evaluacion" id="DB17E402-8D3E-E17F-D101-DCC9E63C3E53">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>DDD86216-1CD9-43D9-6CD5-72A890AACF4E</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DE18275C-9C15-8A9C-B082-77F13E35EBF0" referredColumn="1FE6448E-5C4A-4E35-0F5B-B9D03C77E500"/>
+</associations>
+</Column>
+<Column name="INSTR_PRACTICA_id_instruccion" id="5B77DCDD-6DAA-895D-12A0-8144EDB58E14">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>B72AA544-BEAF-0255-0A39-F71E68C46171</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="314F4137-A40C-CE14-EE73-85F40D03E125" referredColumn="1FB9190D-D397-E803-3F57-044BFD1E20BB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E60CFF64-2ECC-D105-CC01-066A74F86965" name="EVAL_INSTR_PK">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>3AE72B12-606F-83ED-BF27-BF4CAD0684E0</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E17A9A21-1E58-3B0E-D981-29B7AEF6AAE9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6027E295-AB66-21C9-7F09-CB98801A2E9A" name="EVAL_INSTR_EVALUACION_FK">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>28195A5A-2ECF-E3E8-C2D2-98C5F73944FC</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DB17E402-8D3E-E17F-D101-DCC9E63C3E53"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C8D0A777-F7A3-DE2B-4756-3A82FEC9019F" name="EVAL_INSTR_INSTR_PRACTICA_FK">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>FD555109-A26B-FF6C-3F52-395333B7E9FC</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5B77DCDD-6DAA-895D-12A0-8144EDB58E14"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

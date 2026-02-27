@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="314F4137-A40C-CE14-EE73-85F40D03E125" containerWithKeyObject="D32175C2-231D-F0E7-D53A-85A2605A42CB" localFKIndex="C8D0A777-F7A3-DE2B-4756-3A82FEC9019F" name="EVAL_INSTR_INSTR_PRACTICA_FK">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:51:17 UTC</createdTime>
+<generatorID>FD555109-A26B-FF6C-3F52-395333B7E9FC</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<referredTableLongName>INSTR_PRACTICA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>601AE286-97A4-AA5F-BE86-2409CA49FB50</referredTableID>
+<keyObject>7E1F8C35-6CFF-21A8-D5DB-394E978BD0C1</keyObject>
+<referredKeyID>7E1F8C35-6CFF-21A8-D5DB-394E978BD0C1</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_instruccion</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

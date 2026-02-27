@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CC92B742-98A1-4733-1959-6EBE94B5775A" name="USUARIO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="619D86F7-02F3-C5FB-BA4A-F81B9E9EFC09" name="EVAL_RESP">
 <createdBy>isai</createdBy>
-<createdTime>2026-02-27 02:16:58 UTC</createdTime>
+<createdTime>2026-02-27 02:52:15 UTC</createdTime>
 <ownerDesignName>practica1</ownerDesignName>
 <engineerTo>
 <item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_usuario" id="65BEBAD6-1967-EE2F-2200-A3D5E542B135">
+<Attribute name="id_eval_resp" id="509B0033-5665-7567-1F57-508A34536FC9">
 <createdBy>isai</createdBy>
-<createdTime>2026-02-27 02:19:59 UTC</createdTime>
+<createdTime>2026-02-27 02:52:21 UTC</createdTime>
 <ownerDesignName>practica1</ownerDesignName>
 <engineerTo>
 <item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
@@ -27,22 +27,9 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nombre" id="C774D85C-EC2F-72E7-21FB-4D74347BA00F">
+<Attribute name="id_evaluacion" id="D7740173-D3F7-38EA-C7A7-F0428595EC72">
 <createdBy>isai</createdBy>
-<createdTime>2026-02-27 02:20:39 UTC</createdTime>
-<ownerDesignName>practica1</ownerDesignName>
-<engineerTo>
-<item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>150 CHAR</dataTypeSize>
-<ownDataTypeParameters>150 CHAR,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="dpi" id="3AE49969-6161-8A52-3464-CF3BB82096DB">
-<createdBy>isai</createdBy>
-<createdTime>2026-02-27 02:21:10 UTC</createdTime>
+<createdTime>2026-02-27 02:52:37 UTC</createdTime>
 <ownerDesignName>practica1</ownerDesignName>
 <engineerTo>
 <item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
@@ -52,9 +39,9 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="usuario_acc" id="260E4A1F-F459-3A48-33B2-860CA83C8C98">
+<Attribute name="id_pregunta" id="1984FAA4-CA33-7063-B85B-CFBEA7646B58">
 <createdBy>isai</createdBy>
-<createdTime>2026-02-27 02:21:29 UTC</createdTime>
+<createdTime>2026-02-27 02:52:45 UTC</createdTime>
 <ownerDesignName>practica1</ownerDesignName>
 <engineerTo>
 <item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
@@ -64,55 +51,55 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="fec_creacion" id="DF2B0D06-2E58-1589-0D4F-4D43F8BF9845">
+<Attribute name="id_respuesta" id="8C75ABF7-8777-A71C-91A7-EDD3916E366B">
 <createdBy>isai</createdBy>
-<createdTime>2026-02-27 02:21:45 UTC</createdTime>
+<createdTime>2026-02-27 02:52:58 UTC</createdTime>
 <ownerDesignName>practica1</ownerDesignName>
 <engineerTo>
 <item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
 </engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_centro" id="15BA9FD4-955A-F0CF-63F6-287FD439E47F">
-<createdBy>isai</createdBy>
-<createdTime>2026-02-27 03:33:19 UTC</createdTime>
-<generatorID>29FB3495-810A-E12C-4987-0165F476B9E4</generatorID>
-<ownerDesignName>practica1</ownerDesignName>
-<engineerTo>
-<item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
-</engineerTo>
-<referedAttribute>36923AB7-9071-D2B1-0897-3168F2E634D6</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_escuela" id="F1A31148-0834-F675-A5D0-559CC3B0F884">
+<Attribute name="id_evaluacion1" id="B147D178-9908-057D-ED72-856998D74B4E">
 <createdBy>isai</createdBy>
-<createdTime>2026-02-27 03:33:41 UTC</createdTime>
-<generatorID>616C49BE-2950-FF52-8389-6452BF91332F</generatorID>
+<createdTime>2026-02-27 03:20:16 UTC</createdTime>
+<generatorID>2A965EB6-659A-1AFF-8E76-28AB1D6DC975</generatorID>
 <ownerDesignName>practica1</ownerDesignName>
 <engineerTo>
 <item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
 </engineerTo>
-<referedAttribute>BC79D2B7-3215-C48F-15BF-76F19CA74551</referedAttribute>
+<referedAttribute>54C16108-8BD3-F820-955B-707F0B4E82A9</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_persona" id="7E1E119F-284A-AB90-BB62-96981FF9BE0E">
+<Attribute name="id_pregunta1" id="CC645A39-62A6-6B1A-B746-603658D5C156">
 <createdBy>isai</createdBy>
-<createdTime>2026-02-27 03:33:58 UTC</createdTime>
-<generatorID>DDD1AAA9-7409-4700-C25D-1171F686B466</generatorID>
+<createdTime>2026-02-27 03:23:23 UTC</createdTime>
+<generatorID>D39F05D4-6F80-A1FE-FB48-B8494BC6866F</generatorID>
 <ownerDesignName>practica1</ownerDesignName>
 <engineerTo>
 <item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
 </engineerTo>
-<referedAttribute>0D67428C-AFD1-6B63-26D9-982073805881</referedAttribute>
+<referedAttribute>DA2AB362-277F-C011-38E5-C8BF41294077</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_respuesta1" id="DC95FAD4-9C10-1AA9-5621-64D7453DFEC1">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 03:23:56 UTC</createdTime>
+<generatorID>610D9D1A-52C6-2B51-5AF3-498AFF728F67</generatorID>
+<ownerDesignName>practica1</ownerDesignName>
+<engineerTo>
+<item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
+</engineerTo>
+<referedAttribute>28E4BF0E-B2A8-0B65-6195-1BDFFE569991</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -120,16 +107,16 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="23A0FE91-DC55-F9E7-5DFB-79908A45CE08" name="USUARIO PK">
+<identifier id="1069BD88-38EB-76B4-2A73-9A87639D1B11" name="EVAL_RESP PK">
 <createdBy>isai</createdBy>
-<createdTime>2026-02-27 02:20:37 UTC</createdTime>
+<createdTime>2026-02-27 02:52:35 UTC</createdTime>
 <ownerDesignName>practica1</ownerDesignName>
 <engineerTo>
 <item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>65BEBAD6-1967-EE2F-2200-A3D5E542B135</attributeRef>
+<attributeRef>509B0033-5665-7567-1F57-508A34536FC9</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
