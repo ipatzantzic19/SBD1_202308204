@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CC92B742-98A1-4733-1959-6EBE94B5775A" name="USUARIO">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 02:16:58 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<engineerTo>
+<item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_usuario" id="65BEBAD6-1967-EE2F-2200-A3D5E542B135">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 02:19:59 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<engineerTo>
+<item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="C774D85C-EC2F-72E7-21FB-4D74347BA00F">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 02:20:39 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<engineerTo>
+<item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 CHAR</dataTypeSize>
+<ownDataTypeParameters>150 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dpi" id="3AE49969-6161-8A52-3464-CF3BB82096DB">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 02:21:10 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<engineerTo>
+<item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="usuario_acc" id="260E4A1F-F459-3A48-33B2-860CA83C8C98">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 02:21:29 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<engineerTo>
+<item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fec_creacion" id="DF2B0D06-2E58-1589-0D4F-4D43F8BF9845">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 02:21:45 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<engineerTo>
+<item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="23A0FE91-DC55-F9E7-5DFB-79908A45CE08" name="USUARIO PK">
+<createdBy>isai</createdBy>
+<createdTime>2026-02-27 02:20:37 UTC</createdTime>
+<ownerDesignName>practica1</ownerDesignName>
+<engineerTo>
+<item key="FB2AC500-5676-44DA-A031-ACBED1744FBF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>65BEBAD6-1967-EE2F-2200-A3D5E542B135</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
