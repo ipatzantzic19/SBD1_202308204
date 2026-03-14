@@ -1,0 +1,16 @@
+@startchen 01_many_to_many
+left to right direction
+
+entity EMPLOYEE {
+}
+
+entity PROJECT {
+}
+
+relationship EMP_PRO {
+}
+
+EMPLOYEE -N- EMP_PRO
+EMP_PRO -N- PROJECT
+
+@endchen

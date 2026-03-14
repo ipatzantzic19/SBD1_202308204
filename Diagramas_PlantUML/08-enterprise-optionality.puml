@@ -1,0 +1,48 @@
+@startchen 08-enterprise-optionality
+title ENTERPRISE DATA MODEL
+left to right direction
+skinparam ranksep 20
+
+entity DEPARTMENT {
+}
+entity EMPLOYEE {
+}
+entity PROJECT {
+}
+entity PART {
+}
+entity SUPPLIER {
+}
+
+relationship DEP_EMP {
+}
+relationship DEP_MAN {
+}
+relationship EMP_SUP {
+}
+relationship EMP_PRO {
+}
+relationship PRO_PAR_SUP {
+}
+relationship COMPONENT {
+}
+
+DEPARTMENT -(0,1)- DEP_EMP
+DEP_EMP -(1,N)- EMPLOYEE
+
+DEPARTMENT -(0,1)- DEP_MAN
+DEP_MAN -(0,1)- EMPLOYEE
+
+EMPLOYEE -(0,1)- EMP_SUP
+EMPLOYEE -(1,N)- EMP_SUP
+
+EMPLOYEE -(0,N)- EMP_PRO
+EMP_PRO -(0,N)- PROJECT
+
+PROJECT -(0,N)- PRO_PAR_SUP
+PRO_PAR_SUP -(0,N)- PART
+SUPPLIER -(0,N)- PRO_PAR_SUP
+
+COMPONENT -(1,N)- PART
+COMPONENT -(1,N)- PART
+@endchen

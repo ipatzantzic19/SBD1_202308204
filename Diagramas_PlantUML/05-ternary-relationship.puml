@@ -1,0 +1,19 @@
+@startchen 05-ternary-relationship
+
+entity PROJECT {
+}
+
+entity PART {
+}
+
+entity SUPPLIER {
+}
+
+relationship PRO_PART {
+}
+
+PROJECT -N- PRO_PART
+PART -N- PRO_PART
+SUPPLIER -N- PRO_PART
+
+@endchen

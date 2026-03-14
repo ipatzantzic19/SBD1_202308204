@@ -1,0 +1,16 @@
+@startchen 02-one-to-many
+left to right direction
+
+entity DEPARTMENT {
+}
+
+entity EMPLOYEE {
+}
+
+relationship DEP_EMP {
+}
+
+DEPARTMENT -1- DEP_EMP
+DEP_EMP -N- EMPLOYEE
+
+@endchen

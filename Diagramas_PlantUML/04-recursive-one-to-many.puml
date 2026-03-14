@@ -1,0 +1,13 @@
+@startchen 04-recursive-one-to-many
+left to right direction
+
+entity EMPLOYEE {
+}
+
+relationship SUPERVISES {
+}
+
+EMPLOYEE -1- SUPERVISES
+SUPERVISES -N- EMPLOYEE
+
+@endchen

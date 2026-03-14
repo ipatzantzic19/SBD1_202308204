@@ -1,0 +1,16 @@
+@startchen 03-one-to-one
+left to right direction
+
+entity DEPARTMENT {
+}
+
+entity EMPLOYEE {
+}
+
+relationship MANAGER {
+}
+
+DEPARTMENT -1- MANAGER
+MANAGER -1- EMPLOYEE
+
+@endchen

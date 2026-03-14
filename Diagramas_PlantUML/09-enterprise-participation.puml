@@ -1,0 +1,48 @@
+@startchen 09-enterprise-participation
+title ENTERPRISE DATA MODEL
+left to right direction
+skinparam ranksep 20
+
+entity DEPARTMENT {
+}
+entity EMPLOYEE {
+}
+entity PROJECT {
+}
+entity PART {
+}
+entity SUPPLIER {
+}
+
+relationship DEP_EMP {
+}
+relationship DEP_MAN {
+}
+relationship EMP_SUP {
+}
+relationship EMP_PRO {
+}
+relationship PRO_PAR_SUP {
+}
+relationship COMPONENT {
+}
+
+DEPARTMENT -1- DEP_EMP
+DEP_EMP =N= EMPLOYEE
+
+DEPARTMENT -1- DEP_MAN
+DEP_MAN -1- EMPLOYEE
+
+EMPLOYEE -1- EMP_SUP
+EMPLOYEE =N= EMP_SUP
+
+EMPLOYEE -N- EMP_PRO
+EMP_PRO -N- PROJECT
+
+PROJECT -N- PRO_PAR_SUP
+PRO_PAR_SUP -N- PART
+SUPPLIER -N- PRO_PAR_SUP
+
+COMPONENT -N- PART
+COMPONENT -N- PART
+@endchen

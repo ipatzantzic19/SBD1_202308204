@@ -1,0 +1,12 @@
+@startchen 06-recursive-many-to-many
+
+entity PART {
+}
+
+relationship COMPONENT {
+}
+
+PART -N- COMPONENT
+COMPONENT -N- PART
+
+@endchen
