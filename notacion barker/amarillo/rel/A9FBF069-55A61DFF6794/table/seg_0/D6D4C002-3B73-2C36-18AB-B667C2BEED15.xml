@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D6D4C002-3B73-2C36-18AB-B667C2BEED15" name="PART">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<generatorID>64BACE86-65A1-0FC8-7AE1-6F8B8E226CB3</generatorID>
+<ownerDesignName>amarillo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PART_ID" id="61267FEE-B315-1253-3B06-50BA669048AD">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<ownerDesignName>amarillo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="70FCF0B5-BF08-BDCF-8235-8148CF929B77" name="PART_PK">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<ownerDesignName>amarillo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="61267FEE-B315-1253-3B06-50BA669048AD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

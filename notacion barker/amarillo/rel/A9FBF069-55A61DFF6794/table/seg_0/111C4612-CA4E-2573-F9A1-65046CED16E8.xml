@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="111C4612-CA4E-2573-F9A1-65046CED16E8" name="DEPARTAMENT">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<generatorID>E75B55BF-3621-97D8-34BD-22232266148D</generatorID>
+<ownerDesignName>amarillo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DEPARTAMENT_ID" id="2CA15869-71FA-6EF8-DFAF-501E334F30AD">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<ownerDesignName>amarillo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="EMPLOYEE_EMPLOYEE_ID" id="3F832E2D-D231-8FE2-6419-D9F08C407CA6">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<ownerDesignName>amarillo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="901A31D6-9D50-E085-345B-74247DA8291F" referredColumn="D1775721-A4D1-8F53-5618-D61FE168CE30"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="84D447BE-D55C-2EC5-80AC-E708B12C5431" name="DEPARTAMENT_PK">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<ownerDesignName>amarillo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="2CA15869-71FA-6EF8-DFAF-501E334F30AD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F81B7766-721E-CA56-1618-738B8B6AB855" name="DEPARTAMENT__IDX">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<ownerDesignName>amarillo</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>A29A63F8-677C-7B29-E967-BF0E0B888380</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="3F832E2D-D231-8FE2-6419-D9F08C407CA6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EC646FE8-3178-E450-4E80-88BE7D41271C" name="DEPARTAMENT_EMPLOYEE_FK">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<generatorID>A29A63F8-677C-7B29-E967-BF0E0B888380</generatorID>
+<ownerDesignName>amarillo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3F832E2D-D231-8FE2-6419-D9F08C407CA6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

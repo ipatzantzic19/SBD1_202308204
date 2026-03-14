@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B3E9BC2F-B619-AF2B-1B0B-8BC756E4B206" name="PRO_PAR_SUP">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<generatorID>B24217B2-2D6B-DD9A-210D-7DE7EB92003E</generatorID>
+<ownerDesignName>amarillo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PROJECT_PROJECT_ID" id="1FD44716-066D-B0D6-A9CF-FB3D58606A7A">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<ownerDesignName>amarillo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0E418F8A-40A9-B516-FAA8-5B44E55370C3" referredColumn="0894821D-38B9-EC64-5BEC-DAE84314FD1E"/>
+</associations>
+</Column>
+<Column name="SUPPLIER_SUPPLIER_ID" id="2420AB0B-D437-D85B-3F1C-AE31852805F8">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<ownerDesignName>amarillo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9E3BDE6B-6DAB-7539-0842-E144FDCEBCA6" referredColumn="10F130DA-A18F-226D-550B-DBDE2613DF3D"/>
+</associations>
+</Column>
+<Column name="PART_PART_ID" id="58961C97-CF91-CBE4-634C-0035487B0180">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<ownerDesignName>amarillo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C034DCCE-FFF3-8580-FC1F-0CCD6D9503C8" referredColumn="61267FEE-B315-1253-3B06-50BA669048AD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="89CBDEE4-929C-C1A0-F604-7432E640978C" name="PRO_PAR_SUP_PROJECT_FK">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<generatorID>638D3F2C-E470-60C3-DE3D-957AB1CCD2CA</generatorID>
+<ownerDesignName>amarillo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1FD44716-066D-B0D6-A9CF-FB3D58606A7A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="86EB7118-94BD-BC97-C881-C2677B36BA60" name="PRO_PAR_SUP_SUPPLIER_FK">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<generatorID>BFC3BF70-EC20-AE14-BA9C-B282F263CECF</generatorID>
+<ownerDesignName>amarillo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2420AB0B-D437-D85B-3F1C-AE31852805F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="24C8D2DF-EC4D-A71D-A6C4-4B4778E9D5D3" name="PRO_PAR_SUP_PART_FK">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<generatorID>9C27704A-9E4E-E2CE-0DD2-CBDFF9B5D680</generatorID>
+<ownerDesignName>amarillo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="58961C97-CF91-CBE4-634C-0035487B0180"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

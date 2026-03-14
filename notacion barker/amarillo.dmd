@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="amarillo" id="BBEC42E5-BF1C-0815-A7B8-27C39ADE397C" version="3.5">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:18:48 UTC</createdTime>
+<ownerDesignName>amarillo</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>BBEC42E5-BF1C-0815-A7B8-27C39ADE397C</designId>
+</OSDM_Design>

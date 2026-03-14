@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AB672288-14E2-0FC5-E432-ABD1BAB0A9FB" name="Relation_9">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<ownerDesignName>amarillo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PART_PART_ID" id="9D4B58A5-C621-6CDD-13CC-AB37E5933829">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<ownerDesignName>amarillo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DD7F5B18-9CDD-AF86-C2D9-6C0DF21B5731" referredColumn="61267FEE-B315-1253-3B06-50BA669048AD"/>
+</associations>
+</Column>
+<Column name="PART_PART_ID1" id="9D4D42C6-F4D5-DFCD-4886-B797A245D4ED">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<ownerDesignName>amarillo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F825A9B2-4A56-AF15-AC47-A9128876FE87" referredColumn="61267FEE-B315-1253-3B06-50BA669048AD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D2250B5C-4D12-A919-8D61-8A06CD0261F3" name="Relation_9_PK">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<ownerDesignName>amarillo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9D4B58A5-C621-6CDD-13CC-AB37E5933829"/>
+<colUsage columnID="9D4D42C6-F4D5-DFCD-4886-B797A245D4ED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="809892CE-02CF-2397-FA16-6E1565A30665" name="Relation_9_PART_FK">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<generatorID>9051D61C-86EF-C265-58EA-45AD0FA6DF08</generatorID>
+<ownerDesignName>amarillo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9D4B58A5-C621-6CDD-13CC-AB37E5933829"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BAEE4637-1E0C-F21A-7E78-09524464284E" name="Relation_9_PART_FKv1">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<generatorID>9051D61C-86EF-C265-58EA-45AD0FA6DF08</generatorID>
+<ownerDesignName>amarillo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9D4D42C6-F4D5-DFCD-4886-B797A245D4ED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

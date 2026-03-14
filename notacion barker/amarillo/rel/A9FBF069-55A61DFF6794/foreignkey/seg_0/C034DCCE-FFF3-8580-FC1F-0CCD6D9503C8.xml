@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C034DCCE-FFF3-8580-FC1F-0CCD6D9503C8" containerWithKeyObject="B3E9BC2F-B619-AF2B-1B0B-8BC756E4B206" localFKIndex="24C8D2DF-EC4D-A71D-A6C4-4B4778E9D5D3" name="PRO_PAR_SUP_PART_FK">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<generatorID>9C27704A-9E4E-E2CE-0DD2-CBDFF9B5D680</generatorID>
+<ownerDesignName>amarillo</ownerDesignName>
+<referredTableLongName>PART</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D6D4C002-3B73-2C36-18AB-B667C2BEED15</referredTableID>
+<keyObject>70FCF0B5-BF08-BDCF-8235-8148CF929B77</keyObject>
+<referredKeyID>70FCF0B5-BF08-BDCF-8235-8148CF929B77</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>PART_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

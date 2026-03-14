@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="34E31056-7861-71EA-7E2C-0BF3D60BF814" name="Relation_2">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<ownerDesignName>amarillo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EMPLOYEE_EMPLOYEE_ID" id="9B8F7653-464D-DFB7-A37A-F23FED968877">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<ownerDesignName>amarillo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C9B5A638-81F7-BCD0-5B2B-F1A6C8482301" referredColumn="D1775721-A4D1-8F53-5618-D61FE168CE30"/>
+</associations>
+</Column>
+<Column name="PROJECT_PROJECT_ID" id="16164967-7BA9-3727-656C-CC5F643B15EE">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<ownerDesignName>amarillo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C4B8D165-DFE6-23DF-E344-E71BF0831707" referredColumn="0894821D-38B9-EC64-5BEC-DAE84314FD1E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BBBE8C0C-2729-73F5-21E2-B03D0A6D0E2C" name="Relation_2_PK">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<ownerDesignName>amarillo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9B8F7653-464D-DFB7-A37A-F23FED968877"/>
+<colUsage columnID="16164967-7BA9-3727-656C-CC5F643B15EE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2A9D6CC1-F149-D90D-79BB-1B6991809B5E" name="Relation_2_EMPLOYEE_FK">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<generatorID>09DA327F-0D66-9C6C-91C8-02A0141AA872</generatorID>
+<ownerDesignName>amarillo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9B8F7653-464D-DFB7-A37A-F23FED968877"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D384C468-3333-36DA-03E0-166BE6E7BAA4" name="Relation_2_PROJECT_FK">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-14 15:46:40 UTC</createdTime>
+<generatorID>09DA327F-0D66-9C6C-91C8-02A0141AA872</generatorID>
+<ownerDesignName>amarillo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="16164967-7BA9-3727-656C-CC5F643B15EE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
