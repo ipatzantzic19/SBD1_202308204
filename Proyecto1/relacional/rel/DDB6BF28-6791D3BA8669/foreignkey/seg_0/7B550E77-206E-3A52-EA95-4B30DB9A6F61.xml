@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="7B550E77-206E-3A52-EA95-4B30DB9A6F61" containerWithKeyObject="53B222CF-0866-DC92-C726-B54C3F3D63A3" localFKIndex="0C9E1A47-4706-D136-53AB-7781F4EC02AB" name="FK_ASIGNACION_ESTUDIANTE">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<importedID>499BF166-26ED-3994-64EE-2989530D326D</importedID>
+<referredTableLongName>ESTUDIANTE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>60206E09-A4BD-346B-8871-B0CE2CFC9AB3</referredTableID>
+<keyObject>BFAAE75F-6046-B24D-F859-6309B65E77FB</keyObject>
+<referredKeyID>BFAAE75F-6046-B24D-F859-6309B65E77FB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CARNET</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

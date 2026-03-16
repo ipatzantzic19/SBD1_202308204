@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="32E5F86B-DC41-A433-F2E4-537124DF1A7E" containerWithKeyObject="18FA20CF-CE18-7A0F-4536-07C345A8B4BF" localFKIndex="4FC8C2E6-8B59-AFAA-71FA-D9A5A2503BC7" name="FK_HORARIO_SECCION">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<importedID>FBC2FA93-2714-B601-56A7-C506EF310B9D</importedID>
+<referredTableLongName>SECCION</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>553D4ADC-B410-1C95-1D54-A90784CD979D</referredTableID>
+<keyObject>9B83B33F-6B85-0800-86E0-35A8079C66A8</keyObject>
+<referredKeyID>9B83B33F-6B85-0800-86E0-35A8079C66A8</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>SECCION,ANIO,CICLO,CURSO_CODIGOCURSO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

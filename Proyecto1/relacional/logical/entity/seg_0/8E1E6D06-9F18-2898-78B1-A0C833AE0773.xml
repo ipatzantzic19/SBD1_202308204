@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8E1E6D06-9F18-2898-78B1-A0C833AE0773" name="CARRERA">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>9439BCC9-7D1F-7E54-E560-B758316E1453</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CARRERA" id="93C73311-B170-215F-1616-736C4EB81753">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>F0CC28FC-E8C0-1E48-BE6E-662B5EE76F1C</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOMBRE" id="F2B86CFF-7043-B718-C929-13CF7B2AFFF1">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>D85D49B0-924F-7FA3-36A3-EC2E9645B42F</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>9D591353-1670-39DC-35A2-23FE8C4EA0D0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="665DA07A-A721-0B3D-D8FF-DCDF8A7D3C0B" name="PK CARRERA">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>8355BACE-EABC-690C-E410-D396596F81B1</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>93C73311-B170-215F-1616-736C4EB81753</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

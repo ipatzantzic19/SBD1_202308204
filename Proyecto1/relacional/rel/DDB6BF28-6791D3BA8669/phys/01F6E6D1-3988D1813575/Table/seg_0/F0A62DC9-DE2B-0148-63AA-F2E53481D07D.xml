@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="INSCRIPCION" directorySegmentName="seg_0" id="F0A62DC9-DE2B-0148-63AA-F2E53481D07D">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CARRERA" id="17A7635C-91FC-D87B-3302-B934229AA60E">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CARNET" id="84AAC590-D797-3016-2F7F-FD81CCFC1D6A">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FECHAINSCRIPCION" id="A91C16EA-DF54-ACF3-3F1E-0ABB25A84AD0">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_INSCRIPCION_ESTUDIANTE" id="ACD4AEB5-3619-722E-43E3-4D30C172D785">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_INSCRIPCION_CARRERA" id="DEC9B14C-7CBD-6C66-D0A4-0008EF6ADD6B">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_INSCRIPCION" id="5BAEC19C-B51D-EC0F-4094-0E4AA5FA9D7C">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

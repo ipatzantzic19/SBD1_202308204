@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1FC15035-78F2-5B1A-C301-D7E7FCC76484" name="SALON">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>890B12F4-82E0-4C1B-4422-DC5957B7FFE3</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="EDIFICIO" id="28FB9B15-7F9E-F234-95AF-ED4981A479A5">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>774945E1-68FC-32F0-4A13-3167E2C46BC8</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>9CD45084-AC3F-7A66-870B-D31688E15DE2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SALON" id="940F797A-CA1F-DE4D-C84E-9389B655C02F">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>EC9CCF0B-8D99-EFBD-CAE9-2C26129E6DD0</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CAPACIDAD" id="37A19B28-459C-7A72-28A0-BFE2780B0765">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>FAB15D97-44C1-D5E0-4C9B-66EF23796637</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8230F7BB-4C9D-3D93-FA3E-70384678C5BE" name="PK SALON">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>FE7D2986-F76F-62DE-9E9D-74453934CF4F</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>28FB9B15-7F9E-F234-95AF-ED4981A479A5</attributeRef>
+<attributeRef>940F797A-CA1F-DE4D-C84E-9389B655C02F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

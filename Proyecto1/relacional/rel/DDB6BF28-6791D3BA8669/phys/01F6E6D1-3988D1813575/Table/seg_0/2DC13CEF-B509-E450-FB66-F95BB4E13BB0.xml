@@ -1,0 +1,31 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="CURSO" directorySegmentName="seg_0" id="2DC13CEF-B509-E450-FB66-F95BB4E13BB0">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="NOMBRECURSO" id="B14C8737-5129-BD88-13D5-61E1E5D661B9">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CODIGOCURSO" id="FDA12EB6-F450-793F-A261-CD919C9BDC00">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_CURSO" id="2468EFC5-BA2F-C167-FA71-ED1850DEE146">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

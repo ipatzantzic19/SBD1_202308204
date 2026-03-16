@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CCA8E451-1720-5AAF-F29B-6266E93B9876" name="ASIGNACION">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>53B222CF-0866-DC92-C726-B54C3F3D63A3</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ESTUDIANTE CARNET" id="BCE35DEA-DF38-EF80-572B-CD6A28ED73FC">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>960C78E8-E394-A04A-F6FA-E0F8E803F699</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>BF407F63-4230-B7CE-52CD-F68E64108BDD</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>FC1B3F82-4B46-7341-75C0-333067E8CF8F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SECCION CODIGOCURSO" id="61AB4E4C-2649-5790-EDD8-B5D3DEA50CB3">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>833A9FF5-8E18-1416-3832-91EDAAB3619A</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>7B87BE22-CDF0-AF18-89CD-B1D70673F0B1</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SECCION SECCION" id="D3A6B3AB-20EA-7F55-B518-09A14AA10ED9">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>833A9FF5-8E18-1416-3832-91EDAAB3619A</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>72E7D0FB-0157-A117-CCE4-85C20340A243</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>162ED62B-E161-F6B4-6B6E-3B4CE8FBAC19</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SECCION ANIO" id="D3C5CC8A-12F3-96CB-5E18-697C8C62769D">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>833A9FF5-8E18-1416-3832-91EDAAB3619A</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>B3090C7A-D539-247A-0728-C4EBBE56D871</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>83FF24D9-7160-6BB1-0645-C16F99B7B7EF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SECCION CICLO" id="537A9DFB-425E-669E-E74D-D82AF84A063D">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>833A9FF5-8E18-1416-3832-91EDAAB3619A</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>EDD817A8-A789-0618-6EB8-ACAEBBE9295E</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A1035727-9C01-F5F9-5C41-02966765DAA8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ZONA" id="71431F39-71D7-605C-A832-BBC6339ED1F0">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>007F9E46-CBB6-1048-3A65-2D2308E880ED</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>EC6C69FA-412F-78AB-07C9-BFEA3FF4D51D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOTA" id="BA798F61-8C7B-D7C4-567F-B84314328EFD">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>BB47E596-6805-1A72-395C-A96E0AE49C25</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>EC6C69FA-412F-78AB-07C9-BFEA3FF4D51D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B9ECAE74-4E30-C671-53C0-5DAB7491C638" name="PK ASIGNACION">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>BAEA6476-66BE-B2B6-2580-44AE9CF901AA</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BCE35DEA-DF38-EF80-572B-CD6A28ED73FC</attributeRef>
+<attributeRef>61AB4E4C-2649-5790-EDD8-B5D3DEA50CB3</attributeRef>
+<attributeRef>D3A6B3AB-20EA-7F55-B518-09A14AA10ED9</attributeRef>
+<attributeRef>D3C5CC8A-12F3-96CB-5E18-697C8C62769D</attributeRef>
+<attributeRef>537A9DFB-425E-669E-E74D-D82AF84A063D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="18FA20CF-CE18-7A0F-4536-07C345A8B4BF" name="HORARIO">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<importedID>A5F5D4FA-3000-F454-3B0F-D0991212894B</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SECCION_CURSO_CODIGOCURSO" id="CAC3CF5F-67A6-307C-31E5-46731A63AB6D">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<importedID>D878F8C2-C347-F89B-E09B-5250D4658B16</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="32E5F86B-DC41-A433-F2E4-537124DF1A7E" referredColumn="0C3C2C4A-A204-D3B8-F936-73CD577559E3"/>
+</associations>
+</Column>
+<Column name="SECCION_SECCION" id="43D369B2-1CFC-72FF-B7AC-153368B354B4">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<importedID>D27B418A-EB08-5DE8-4E31-C85BCECF5E84</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>162ED62B-E161-F6B4-6B6E-3B4CE8FBAC19</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="32E5F86B-DC41-A433-F2E4-537124DF1A7E" referredColumn="6F1A6EA8-0996-E666-DDA5-6EF0E07D34DB"/>
+</associations>
+</Column>
+<Column name="SECCION_ANIO" id="F8882377-1050-D666-C73E-C46DEEC730E1">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<importedID>18221246-730F-B383-171D-B74ACC414F20</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>83FF24D9-7160-6BB1-0645-C16F99B7B7EF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="32E5F86B-DC41-A433-F2E4-537124DF1A7E" referredColumn="03314107-B383-0D52-17A6-D243E31C0E81"/>
+</associations>
+</Column>
+<Column name="SECCION_CICLO" id="093D1574-B663-7F3E-C9F1-3545A2EF55E6">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<importedID>20DBE7CC-6A45-07F5-0C81-F27E72994B14</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A1035727-9C01-F5F9-5C41-02966765DAA8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="32E5F86B-DC41-A433-F2E4-537124DF1A7E" referredColumn="B7C0D6B8-2170-AC15-75D8-A1875F46AAB2"/>
+</associations>
+</Column>
+<Column name="PERIODO_PERIODO" id="FB35A44D-AF3C-71B5-BB44-F9BC837BB88F">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<importedID>A5470986-5064-7FF0-6655-190ADBDC6365</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>07009C7D-8849-9A6A-D2B3-ACC56094A742</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8FC1B0FA-9C59-50F1-F3A7-7C0277202A22" referredColumn="6BD1A8D4-B43A-A0BF-EE50-5D897423BA3D"/>
+</associations>
+</Column>
+<Column name="DIA_DIA" id="B82C660D-C01A-7EE7-F0D4-1D5E1422B7A6">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<importedID>2AA4975D-7E65-F9FF-A936-16C13DB68E67</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3CF35EB4-D507-96C6-2B4E-ABC7533827CA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EE4F2D5A-7AB2-5F20-B359-5E266B2B2857" referredColumn="02DFC653-BEC8-1231-B4DB-EC9856718456"/>
+</associations>
+</Column>
+<Column name="SALON_EDIFICIO" id="67BD11E4-DF05-8AF1-CC02-C22B333ADAA9">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<importedID>0EBDA3E8-CB3E-8E34-9C0E-C64492A41FE5</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>9CD45084-AC3F-7A66-870B-D31688E15DE2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="469D2DF3-17DE-8783-E7FA-955EF5194FE9" referredColumn="774945E1-68FC-32F0-4A13-3167E2C46BC8"/>
+</associations>
+</Column>
+<Column name="SALON_SALON" id="E8A40E49-8341-2039-04BE-44050742AC1D">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<importedID>A9FAF038-D5D3-7AE7-0ABA-57869838CBCB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="469D2DF3-17DE-8783-E7FA-955EF5194FE9" referredColumn="EC9CCF0B-8D99-EFBD-CAE9-2C26129E6DD0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="85C2D81E-4986-97DE-AF2A-0F8653905468" name="PK_HORARIO">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<importedID>006C570D-243B-FA75-825F-DE770768B0D6</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CAC3CF5F-67A6-307C-31E5-46731A63AB6D"/>
+<colUsage columnID="43D369B2-1CFC-72FF-B7AC-153368B354B4"/>
+<colUsage columnID="F8882377-1050-D666-C73E-C46DEEC730E1"/>
+<colUsage columnID="093D1574-B663-7F3E-C9F1-3545A2EF55E6"/>
+<colUsage columnID="FB35A44D-AF3C-71B5-BB44-F9BC837BB88F"/>
+<colUsage columnID="B82C660D-C01A-7EE7-F0D4-1D5E1422B7A6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E4694A4F-7DC5-4B68-606E-862643AEA457" name="FK_HORARIO_DIA">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B82C660D-C01A-7EE7-F0D4-1D5E1422B7A6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E6A13F05-3FB1-4B4C-C3D4-D65A13062888" name="FK_HORARIO_PERIODO">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FB35A44D-AF3C-71B5-BB44-F9BC837BB88F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0600E62A-8606-1C8E-058E-00B910F89ADB" name="FK_HORARIO_SALON">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="67BD11E4-DF05-8AF1-CC02-C22B333ADAA9"/>
+<colUsage columnID="E8A40E49-8341-2039-04BE-44050742AC1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4FC8C2E6-8B59-AFAA-71FA-D9A5A2503BC7" name="FK_HORARIO_SECCION">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="43D369B2-1CFC-72FF-B7AC-153368B354B4"/>
+<colUsage columnID="F8882377-1050-D666-C73E-C46DEEC730E1"/>
+<colUsage columnID="093D1574-B663-7F3E-C9F1-3545A2EF55E6"/>
+<colUsage columnID="CAC3CF5F-67A6-307C-31E5-46731A63AB6D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

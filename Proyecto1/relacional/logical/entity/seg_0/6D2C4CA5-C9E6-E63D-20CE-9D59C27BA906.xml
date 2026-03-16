@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6D2C4CA5-C9E6-E63D-20CE-9D59C27BA906" name="PRERREQUISITO">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>0ECFF02B-8D5B-8AA4-6938-B164C67C4BB9</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="PENSUM CARRERA" id="CCE0289D-D703-C72C-ED53-55CD7C4607A7">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>B354B608-D3E1-A0D3-FBBF-AEF8A51422B7</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>830125B3-4644-5B27-51CE-D0D02B9F43B3</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PENSUM PLAN" id="15B0836E-571D-4DF9-FF19-57F5D22493A2">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>B354B608-D3E1-A0D3-FBBF-AEF8A51422B7</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>86E3A1AC-B4D7-68E5-2735-565E8ED744ED</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A1035727-9C01-F5F9-5C41-02966765DAA8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PENSUM CURSO" id="412FBF2C-0D9B-509D-8200-8DDC76D2DA90">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>B354B608-D3E1-A0D3-FBBF-AEF8A51422B7</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>AE238B43-B194-C622-8A27-5B1C9FCEEB07</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CURSO PREREQUISITO" id="69215EDA-6932-4938-CE31-9173DD474FB9">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>FA3BDD57-2076-AB91-6E5C-FBB93CBBBE90</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>0F8CEB98-6183-DAD8-45FB-ED26CD7091AF</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C1C8A75F-ED70-12BE-8FD0-19369C21B74C" name="PK PRERREQUISITO">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>B43D479D-0D49-D576-8350-639A15B11EF5</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CCE0289D-D703-C72C-ED53-55CD7C4607A7</attributeRef>
+<attributeRef>15B0836E-571D-4DF9-FF19-57F5D22493A2</attributeRef>
+<attributeRef>412FBF2C-0D9B-509D-8200-8DDC76D2DA90</attributeRef>
+<attributeRef>69215EDA-6932-4938-CE31-9173DD474FB9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

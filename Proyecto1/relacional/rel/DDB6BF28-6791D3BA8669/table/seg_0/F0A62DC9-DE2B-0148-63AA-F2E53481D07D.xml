@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F0A62DC9-DE2B-0148-63AA-F2E53481D07D" name="INSCRIPCION">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<importedID>25506730-81F4-D430-36CA-76FA222D8AD9</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CARRERA" id="17A7635C-91FC-D87B-3302-B934229AA60E">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<importedID>B706C218-3CD8-8479-D920-514F4552E4F0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D9EE0ACC-DC70-0C96-D682-844EDB759E80" referredColumn="F0CC28FC-E8C0-1E48-BE6E-662B5EE76F1C"/>
+</associations>
+</Column>
+<Column name="CARNET" id="84AAC590-D797-3016-2F7F-FD81CCFC1D6A">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<importedID>69C3269E-AC6D-2AA4-DC58-E1AEF855CB78</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>FC1B3F82-4B46-7341-75C0-333067E8CF8F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2132D9B1-12C0-D0C1-A3C0-7A6F783B9749" referredColumn="6D9743EE-DB32-7F68-D2A0-F6FCFCA54D57"/>
+</associations>
+</Column>
+<Column name="FECHAINSCRIPCION" id="A91C16EA-DF54-ACF3-3F1E-0ABB25A84AD0">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<importedID>BED18266-C7CA-DF5E-554F-2E0B11915084</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>AF2037BC-6A50-3586-3240-4BE40B7FCC4F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5BAEC19C-B51D-EC0F-4094-0E4AA5FA9D7C" name="PK_INSCRIPCION">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<importedID>027E754D-879D-7BC2-241F-25EE97563CAF</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="17A7635C-91FC-D87B-3302-B934229AA60E"/>
+<colUsage columnID="84AAC590-D797-3016-2F7F-FD81CCFC1D6A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DEC9B14C-7CBD-6C66-D0A4-0008EF6ADD6B" name="FK_INSCRIPCION_CARRERA">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="17A7635C-91FC-D87B-3302-B934229AA60E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="ACD4AEB5-3619-722E-43E3-4D30C172D785" name="FK_INSCRIPCION_ESTUDIANTE">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="84AAC590-D797-3016-2F7F-FD81CCFC1D6A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

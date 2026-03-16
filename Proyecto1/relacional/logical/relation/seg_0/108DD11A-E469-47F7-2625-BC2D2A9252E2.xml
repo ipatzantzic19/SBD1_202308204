@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_INSCRIPCION_ESTUDIANTE" directorySegmentName="seg_0" id="108DD11A-E469-47F7-2625-BC2D2A9252E2">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>2132D9B1-12C0-D0C1-A3C0-7A6F783B9749</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<sourcePk>6FDC8C9E-44F4-B0D5-5A1E-B7E36C0A2AE5</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>62FB44A8-8100-16ED-DD5E-312AC2F26023</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6D399D81-F03A-72C3-50C6-F5F3611E686A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

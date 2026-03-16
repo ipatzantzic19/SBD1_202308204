@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_PENSUM_PLAN" directorySegmentName="seg_0" id="7910FC5F-9DB2-7597-68A8-374072E87EEF">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>0452649B-1AC3-9C5B-A5C2-12D4D9FFD0A1</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<sourcePk>AD8E7DA9-D7F5-F2DC-A2A3-31E4747E2B84</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>A5A41C50-9B00-B25C-51D9-7106E7C9178E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>1F63EB01-43F0-75CB-42F1-3C493E28EB92</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

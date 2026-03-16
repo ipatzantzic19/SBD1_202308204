@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2C143E84-8530-6F1E-4044-A28C41669B0C" containerWithKeyObject="53B222CF-0866-DC92-C726-B54C3F3D63A3" localFKIndex="A0D4537F-0D79-E7E0-E927-023041851D4F" name="FK_ASIGNACION_SECCION">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<importedID>7077F4B4-3E81-191F-F1EF-C58C0F06F352</importedID>
+<referredTableLongName>SECCION</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>553D4ADC-B410-1C95-1D54-A90784CD979D</referredTableID>
+<keyObject>9B83B33F-6B85-0800-86E0-35A8079C66A8</keyObject>
+<referredKeyID>9B83B33F-6B85-0800-86E0-35A8079C66A8</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>SECCION,ANIO,CICLO,CURSO_CODIGOCURSO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

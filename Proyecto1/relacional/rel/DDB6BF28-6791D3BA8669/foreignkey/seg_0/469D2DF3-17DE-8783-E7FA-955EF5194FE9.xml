@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="469D2DF3-17DE-8783-E7FA-955EF5194FE9" containerWithKeyObject="18FA20CF-CE18-7A0F-4536-07C345A8B4BF" localFKIndex="0600E62A-8606-1C8E-058E-00B910F89ADB" name="FK_HORARIO_SALON">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<importedID>1DF15971-BD81-1651-9665-06CD8CE081C3</importedID>
+<referredTableLongName>SALON</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>890B12F4-82E0-4C1B-4422-DC5957B7FFE3</referredTableID>
+<keyObject>FE7D2986-F76F-62DE-9E9D-74453934CF4F</keyObject>
+<referredKeyID>FE7D2986-F76F-62DE-9E9D-74453934CF4F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>EDIFICIO,SALON</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

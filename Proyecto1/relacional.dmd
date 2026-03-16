@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="relacional" id="A3009888-0DD7-9EBB-9354-7FF2F9D5C23A" version="3.5">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:20:47 UTC</createdTime>
+<ownerDesignName>relacional</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>A3009888-0DD7-9EBB-9354-7FF2F9D5C23A</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="938CE3B2-447E-FF5D-CDDB-B75200552A5E">
+<designStoragePath>/script</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

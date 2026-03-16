@@ -1,0 +1,152 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C8F75723-9802-FAF2-7B04-9EF341911615" name="HORARIO">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>18FA20CF-CE18-7A0F-4536-07C345A8B4BF</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="SECCION CURSO CODIGOCURSO" id="028E37E3-0E77-EDD0-2B2C-D521ADE388D2">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>0BFC9309-A7DD-59A4-B298-B5D6D7B1AD03</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>7B87BE22-CDF0-AF18-89CD-B1D70673F0B1</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SECCION SECCION" id="DD69475F-924F-8321-9EDD-134989E29CB0">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>0BFC9309-A7DD-59A4-B298-B5D6D7B1AD03</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>72E7D0FB-0157-A117-CCE4-85C20340A243</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>162ED62B-E161-F6B4-6B6E-3B4CE8FBAC19</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SECCION ANIO" id="BA8997A0-9A89-9745-89CB-259024345F1E">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>0BFC9309-A7DD-59A4-B298-B5D6D7B1AD03</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>B3090C7A-D539-247A-0728-C4EBBE56D871</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>83FF24D9-7160-6BB1-0645-C16F99B7B7EF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SECCION CICLO" id="92A7B627-2F73-EC30-CB80-A82E68E7CB40">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>0BFC9309-A7DD-59A4-B298-B5D6D7B1AD03</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>EDD817A8-A789-0618-6EB8-ACAEBBE9295E</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A1035727-9C01-F5F9-5C41-02966765DAA8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PERIODO PERIODO" id="05D0D684-B398-C69D-85CF-E357832303DC">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>5E888A7C-75E4-C4B1-B245-A7F48ACC10C5</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>ECBF58D0-6629-2683-9CA2-2341718CDCC4</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>07009C7D-8849-9A6A-D2B3-ACC56094A742</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DIA DIA" id="E06C8A54-2AAE-11F8-7F2D-54774B20758D">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>8A6C5E07-4140-841D-288E-0A8EEB244339</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>722EB67F-1F52-AB9F-F045-D479CE5F126C</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3CF35EB4-D507-96C6-2B4E-ABC7533827CA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SALON EDIFICIO" id="A2D21BAF-8597-F9D9-5BDE-521B37F8DDFF">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>A4407FB5-D524-C548-5D9D-046A8F2B3AD8</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>28FB9B15-7F9E-F234-95AF-ED4981A479A5</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>9CD45084-AC3F-7A66-870B-D31688E15DE2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SALON SALON" id="70DAB3B4-025B-03A5-C6F7-8DBE8171C418">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>A4407FB5-D524-C548-5D9D-046A8F2B3AD8</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>940F797A-CA1F-DE4D-C84E-9389B655C02F</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="143111D4-70BF-29E1-C4CB-7601972DBEAA" name="PK HORARIO">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>85C2D81E-4986-97DE-AF2A-0F8653905468</generatorID>
+<ownerDesignName>relacional</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>028E37E3-0E77-EDD0-2B2C-D521ADE388D2</attributeRef>
+<attributeRef>DD69475F-924F-8321-9EDD-134989E29CB0</attributeRef>
+<attributeRef>BA8997A0-9A89-9745-89CB-259024345F1E</attributeRef>
+<attributeRef>92A7B627-2F73-EC30-CB80-A82E68E7CB40</attributeRef>
+<attributeRef>05D0D684-B398-C69D-85CF-E357832303DC</attributeRef>
+<attributeRef>E06C8A54-2AAE-11F8-7F2D-54774B20758D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
