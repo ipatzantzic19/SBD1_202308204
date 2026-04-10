@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_PRERREQ_CURSO_PRE" directorySegmentName="seg_0" id="FA3BDD57-2076-AB91-6E5C-FBB93CBBBE90">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>DABCA8A8-F6CE-48C2-57A6-84934DE7138D</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<sourcePk>4CE41FB7-4103-797A-42EC-D8AE77B26F3D</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>877DFC60-8B80-FBF6-6781-9F3A04C4C8C5</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6D2C4CA5-C9E6-E63D-20CE-9D59C27BA906</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

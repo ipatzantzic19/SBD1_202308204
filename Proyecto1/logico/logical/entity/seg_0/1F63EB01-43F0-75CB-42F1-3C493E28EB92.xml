@@ -1,0 +1,145 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1F63EB01-43F0-75CB-42F1-3C493E28EB92" name="PENSUM">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>AB1E5173-68B4-F88E-4ED0-69C78519ACE8</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CURSO CODIGOCURSO" id="AE238B43-B194-C622-8A27-5B1C9FCEEB07">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>08E87B85-A19F-5490-6882-04375C8F7225</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>0F8CEB98-6183-DAD8-45FB-ED26CD7091AF</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PLAN PLAN" id="86E3A1AC-B4D7-68E5-2735-565E8ED744ED">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>7910FC5F-9DB2-7597-68A8-374072E87EEF</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>77E7A8BA-9ABB-DC42-4C48-7E47B0A7F4B5</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A1035727-9C01-F5F9-5C41-02966765DAA8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PLAN CARRERA CARRERA" id="830125B3-4644-5B27-51CE-D0D02B9F43B3">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>7910FC5F-9DB2-7597-68A8-374072E87EEF</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>B8084E1C-FFD0-F020-D83A-9FE7DA64EB6F</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="OBLIGATORIEDAD" id="D60AD760-3B7E-D551-0CE5-322FFB74BB4D">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>F09604F5-9151-F235-5A53-6C88EFC469DB</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3CF35EB4-D507-96C6-2B4E-ABC7533827CA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NUMCREDITOS" id="748C0ECB-24F8-3F55-F805-86B8D1F79D44">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>C155E78D-6DC1-CEE3-86D0-BB7C4F429981</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOTAAPROBACION" id="56CA5746-BDC1-1EBB-E574-37DDAE2C6DE7">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>65178465-ACAF-7763-5836-10698D46A2AE</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>EC6C69FA-412F-78AB-07C9-BFEA3FF4D51D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ZONAMINIMA" id="2860C56E-C89F-D62B-4B9E-85168CDEF8E7">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>2E07153E-4028-F5E6-E6F1-CBCE2528E270</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>EC6C69FA-412F-78AB-07C9-BFEA3FF4D51D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CREDPRERREQUISITOS" id="DB2B252D-7D9D-0375-74F4-CF367B9CD106">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>06FB9895-5236-DA7D-57FF-F40340D3B621</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="35B065DA-530B-3050-3065-5456F2690E01" name="PK PENSUM">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>6C808200-FAA7-DE7F-82D4-FDB8B811DBBA</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>AE238B43-B194-C622-8A27-5B1C9FCEEB07</attributeRef>
+<attributeRef>86E3A1AC-B4D7-68E5-2735-565E8ED744ED</attributeRef>
+<attributeRef>830125B3-4644-5B27-51CE-D0D02B9F43B3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

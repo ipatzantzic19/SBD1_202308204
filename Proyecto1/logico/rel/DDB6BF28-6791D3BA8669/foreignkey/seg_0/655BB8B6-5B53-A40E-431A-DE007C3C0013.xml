@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="655BB8B6-5B53-A40E-431A-DE007C3C0013" containerWithKeyObject="0ECFF02B-8D5B-8AA4-6938-B164C67C4BB9" localFKIndex="DC02D448-44BA-798D-B948-4E1D5110F156" name="FK_PRERREQ_PENSUM">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>54F93C66-C550-3C6C-0914-10EE3ECCCEE6</importedID>
+<referredTableLongName>PENSUM</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>AB1E5173-68B4-F88E-4ED0-69C78519ACE8</referredTableID>
+<keyObject>6C808200-FAA7-DE7F-82D4-FDB8B811DBBA</keyObject>
+<referredKeyID>6C808200-FAA7-DE7F-82D4-FDB8B811DBBA</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CURSO_CODIGOCURSO,PLAN_PLAN,PLAN_CARRERA_CARRERA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

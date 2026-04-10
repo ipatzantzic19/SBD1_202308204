@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6D399D81-F03A-72C3-50C6-F5F3611E686A" name="INSCRIPCION">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>F0A62DC9-DE2B-0148-63AA-F2E53481D07D</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CARRERA" id="8433A03E-79C6-E01A-FEB8-29C718F900E6">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>C534A275-A47C-FE39-62FB-7C5EC93F87B2</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>93C73311-B170-215F-1616-736C4EB81753</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CARNET" id="88DB7B5F-63AA-1194-515E-F5F333A50C31">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>108DD11A-E469-47F7-2625-BC2D2A9252E2</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<referedAttribute>BF407F63-4230-B7CE-52CD-F68E64108BDD</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>FC1B3F82-4B46-7341-75C0-333067E8CF8F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FECHAINSCRIPCION" id="8C2EC56C-C10E-298E-F3ED-9BCF43CC3216">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>A91C16EA-DF54-ACF3-3F1E-0ABB25A84AD0</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>AF2037BC-6A50-3586-3240-4BE40B7FCC4F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0707BF32-B9BD-6746-B43C-E17746249072" name="PK INSCRIPCION">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>5BAEC19C-B51D-EC0F-4094-0E4AA5FA9D7C</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8433A03E-79C6-E01A-FEB8-29C718F900E6</attributeRef>
+<attributeRef>88DB7B5F-63AA-1194-515E-F5F333A50C31</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

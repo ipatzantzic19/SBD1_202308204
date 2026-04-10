@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_SECCION_CATEDRATICO" directorySegmentName="seg_0" id="617D807A-64B6-479C-898C-9082019C84FC">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>C1E34E13-421F-370F-2F1E-81A202A3CB1F</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<sourcePk>5242CC39-5C9E-7C56-1D6E-99ADB359B670</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>770B10DA-5DA5-654F-0ED3-04DFE90BFE41</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>483954D4-4139-5387-8A67-47D179A93BDA</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

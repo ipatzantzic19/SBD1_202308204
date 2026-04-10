@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="21351CA0-3B88-F1AF-A1E2-79AE39BF9713" name="PLAN">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>864BF7A8-2084-EE78-4B59-7C4FF4A6B07E</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PLAN" id="72EB06B3-2EE7-8900-BBA8-D46E1762F50B">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>4FCD1071-6B37-45BB-6692-C5D65C35C883</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A1035727-9C01-F5F9-5C41-02966765DAA8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CARRERA" id="09267AE3-2519-49F6-FC10-8F6D6D65C67A">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>9C09ACF8-95E4-03C2-780C-012DCFC16B49</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="68618D0D-2822-CCEE-B6DB-BFFF62096886" referredColumn="F0CC28FC-E8C0-1E48-BE6E-662B5EE76F1C"/>
+</associations>
+</Column>
+<Column name="NOMBRE" id="D623E1B2-1B51-FA54-BAB8-D4DB307E1A8E">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>C1F998FA-CAA0-DA04-DA6E-CD1AC13B9B9E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A3A2D857-950E-A326-2F2B-1B406BA05D43</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ANIOINICIAL" id="51778F20-12BE-7D58-8586-C8B1D3B93F6A">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>473F5EAC-6EE6-2804-4462-94EB6CAEFB0E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>83FF24D9-7160-6BB1-0645-C16F99B7B7EF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CICLOINICIAL" id="821ABA3B-96BE-F2E3-3EC2-AAB8B777983D">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>1036E892-2AF4-CF43-588B-F218BFD0AB1C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A1035727-9C01-F5F9-5C41-02966765DAA8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ANIOFINAL" id="EF21E54E-BA4E-BE5E-341B-9A0270C9FB90">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>4810359F-81D9-6647-6404-C652AA4182B6</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>83FF24D9-7160-6BB1-0645-C16F99B7B7EF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CICLOFINAL" id="03DC524C-1FAC-FD7B-449F-33AD9022420A">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>69E31514-857B-D034-E002-8ECBBB1D505B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A1035727-9C01-F5F9-5C41-02966765DAA8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUMCREDITOSCIERRE" id="F725B1D9-D9B2-4363-C7A1-E82B285CB25F">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>B55BA71C-63EE-FA79-FA8A-818999131AC7</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6B936185-5309-349C-B632-F072BD74FD43" name="PK_PLAN">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>7AFE7453-238D-163F-4B9E-C50864B96023</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="72EB06B3-2EE7-8900-BBA8-D46E1762F50B"/>
+<colUsage columnID="09267AE3-2519-49F6-FC10-8F6D6D65C67A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CF8355DB-208A-DCB9-2021-3135B4230D35" name="FK_PLAN_CARRERA">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="09267AE3-2519-49F6-FC10-8F6D6D65C67A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

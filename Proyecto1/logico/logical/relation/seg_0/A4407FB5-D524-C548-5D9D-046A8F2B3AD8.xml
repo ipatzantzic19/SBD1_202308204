@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_HORARIO_SALON" directorySegmentName="seg_0" id="A4407FB5-D524-C548-5D9D-046A8F2B3AD8">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>469D2DF3-17DE-8783-E7FA-955EF5194FE9</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<sourcePk>8230F7BB-4C9D-3D93-FA3E-70384678C5BE</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1FC15035-78F2-5B1A-C301-D7E7FCC76484</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>C8F75723-9802-FAF2-7B04-9EF341911615</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

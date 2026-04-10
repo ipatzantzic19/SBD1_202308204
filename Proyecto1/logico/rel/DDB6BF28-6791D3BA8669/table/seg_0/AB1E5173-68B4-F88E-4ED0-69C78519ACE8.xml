@@ -1,0 +1,183 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AB1E5173-68B4-F88E-4ED0-69C78519ACE8" name="PENSUM">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>36B3A4C7-50AE-5B2D-ACFC-3AD1E58F0967</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CURSO_CODIGOCURSO" id="6732C992-6D67-D679-4BCB-6B6C11C4C688">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>1CB58E8A-EA03-7D40-0EAA-0132FBCB2B3E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9C2576E2-7E95-5AD9-8110-750CAC7BE1CF" referredColumn="FDA12EB6-F450-793F-A261-CD919C9BDC00"/>
+</associations>
+</Column>
+<Column name="PLAN_PLAN" id="ACA51116-145E-BCA6-D887-EE21CED34387">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>B0F75CB7-00EC-B46D-D780-97D408AFFAFF</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A1035727-9C01-F5F9-5C41-02966765DAA8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0452649B-1AC3-9C5B-A5C2-12D4D9FFD0A1" referredColumn="72EB06B3-2EE7-8900-BBA8-D46E1762F50B"/>
+</associations>
+</Column>
+<Column name="PLAN_CARRERA_CARRERA" id="9B483838-9DB9-A458-374E-4A3D3189D099">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>7418D433-656C-712F-405F-568A463F64C9</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0452649B-1AC3-9C5B-A5C2-12D4D9FFD0A1" referredColumn="09267AE3-2519-49F6-FC10-8F6D6D65C67A"/>
+</associations>
+</Column>
+<Column name="OBLIGATORIEDAD" id="F09604F5-9151-F235-5A53-6C88EFC469DB">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>374D79F7-F295-D0FF-32BA-3DFD8E779FCB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3CF35EB4-D507-96C6-2B4E-ABC7533827CA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUMCREDITOS" id="C155E78D-6DC1-CEE3-86D0-BB7C4F429981">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>25CB5F05-C16F-488C-E632-E22E90436DE4</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOTAAPROBACION" id="65178465-ACAF-7763-5836-10698D46A2AE">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>185AF0ED-CBA6-AD8D-03A2-7C73928CE9A3</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>EC6C69FA-412F-78AB-07C9-BFEA3FF4D51D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ZONAMINIMA" id="2E07153E-4028-F5E6-E6F1-CBCE2528E270">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>FAA26205-DE07-4D71-1E2E-327B415D2815</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>EC6C69FA-412F-78AB-07C9-BFEA3FF4D51D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CREDPRERREQUISITOS" id="06FB9895-5236-DA7D-57FF-F40340D3B621">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>86980BF0-7255-653B-58D6-55EFC0BBAFA3</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6C808200-FAA7-DE7F-82D4-FDB8B811DBBA" name="PK_PENSUM">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>E39D55B9-D258-8656-0854-EB5C6D791C4F</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6732C992-6D67-D679-4BCB-6B6C11C4C688"/>
+<colUsage columnID="ACA51116-145E-BCA6-D887-EE21CED34387"/>
+<colUsage columnID="9B483838-9DB9-A458-374E-4A3D3189D099"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C736A43B-7DCA-1EF5-F23B-3009B231911A" name="FK_PENSUM_CURSO">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6732C992-6D67-D679-4BCB-6B6C11C4C688"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1264FB46-FA83-2237-3385-9856FDE0EEFC" name="FK_PENSUM_PLAN">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ACA51116-145E-BCA6-D887-EE21CED34387"/>
+<colUsage columnID="9B483838-9DB9-A458-374E-4A3D3189D099"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="CK_PENSUM_OBLIGATORIEDAD" directorySegmentName="seg_0" id="7B4E1277-902C-A788-6865-64F52176A140">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>0AC883AD-6F70-380A-5989-CBF7C560F17B</importedID>
+<rule><![CDATA[OBLIGATORIEDAD IN (0, 1)]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="CK_PENSUM_NOTA" directorySegmentName="seg_0" id="56CB3832-6624-36C8-5959-08340BCF77FB">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>0C1C3D15-F6A6-AF86-079A-1DC60C7E0D59</importedID>
+<rule><![CDATA[NOTAAPROBACION BETWEEN 0 AND 100]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="CK_PENSUM_ZONA" directorySegmentName="seg_0" id="05CAC756-43A3-9219-2EEF-06884960CE6E">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>3E6FB314-1ABE-415B-3BF8-DAA56712B757</importedID>
+<rule><![CDATA[ZONAMINIMA BETWEEN 0 AND 100]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

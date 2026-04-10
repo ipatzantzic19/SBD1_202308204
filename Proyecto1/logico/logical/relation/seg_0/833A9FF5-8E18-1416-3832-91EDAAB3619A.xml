@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_ASIGNACION_SECCION" directorySegmentName="seg_0" id="833A9FF5-8E18-1416-3832-91EDAAB3619A">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>2C143E84-8530-6F1E-4044-A28C41669B0C</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<sourcePk>A1908480-D8BF-B355-C738-8D7F8ABD5FF1</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>483954D4-4139-5387-8A67-47D179A93BDA</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>CCA8E451-1720-5AAF-F29B-6266E93B9876</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

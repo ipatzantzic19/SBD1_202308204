@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D9EE0ACC-DC70-0C96-D682-844EDB759E80" containerWithKeyObject="F0A62DC9-DE2B-0148-63AA-F2E53481D07D" localFKIndex="DEC9B14C-7CBD-6C66-D0A4-0008EF6ADD6B" name="FK_INSCRIPCION_CARRERA">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>802D74A7-C08F-F784-19AF-4D7A0DB7BC23</importedID>
+<referredTableLongName>CARRERA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>9439BCC9-7D1F-7E54-E560-B758316E1453</referredTableID>
+<keyObject>8355BACE-EABC-690C-E410-D396596F81B1</keyObject>
+<referredKeyID>8355BACE-EABC-690C-E410-D396596F81B1</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CARRERA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

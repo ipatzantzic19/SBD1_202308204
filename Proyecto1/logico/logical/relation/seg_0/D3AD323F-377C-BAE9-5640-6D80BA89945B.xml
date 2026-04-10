@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_PLAN_CARRERA" directorySegmentName="seg_0" id="D3AD323F-377C-BAE9-5640-6D80BA89945B">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>68618D0D-2822-CCEE-B6DB-BFFF62096886</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<sourcePk>665DA07A-A721-0B3D-D8FF-DCDF8A7D3C0B</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>8E1E6D06-9F18-2898-78B1-A0C833AE0773</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A5A41C50-9B00-B25C-51D9-7106E7C9178E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

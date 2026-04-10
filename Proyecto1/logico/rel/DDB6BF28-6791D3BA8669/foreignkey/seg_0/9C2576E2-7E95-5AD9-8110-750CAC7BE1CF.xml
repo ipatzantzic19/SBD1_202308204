@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="9C2576E2-7E95-5AD9-8110-750CAC7BE1CF" containerWithKeyObject="AB1E5173-68B4-F88E-4ED0-69C78519ACE8" localFKIndex="C736A43B-7DCA-1EF5-F23B-3009B231911A" name="FK_PENSUM_CURSO">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>42234D96-8580-FE81-9A7C-EE047DEA66E1</importedID>
+<referredTableLongName>CURSO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2DC13CEF-B509-E450-FB66-F95BB4E13BB0</referredTableID>
+<keyObject>2468EFC5-BA2F-C167-FA71-ED1850DEE146</keyObject>
+<referredKeyID>2468EFC5-BA2F-C167-FA71-ED1850DEE146</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CODIGOCURSO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

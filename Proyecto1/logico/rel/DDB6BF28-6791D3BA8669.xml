@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" mainViewID="F7F7113F-0064-2C31-3FD6-8768860172E7">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:20:49 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>01F6E6D1-21D0-CFBD-ABDD-3988D1813575</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>script.ddl</fileName>
+<pathName>/home/isai/Documentos/Github/SBD1_202308204/Proyecto1</pathName>
+<dbType>17</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>

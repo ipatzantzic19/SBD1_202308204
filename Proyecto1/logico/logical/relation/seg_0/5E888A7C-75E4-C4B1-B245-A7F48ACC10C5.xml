@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_HORARIO_PERIODO" directorySegmentName="seg_0" id="5E888A7C-75E4-C4B1-B245-A7F48ACC10C5">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:22:11 UTC</createdTime>
+<generatorID>8FC1B0FA-9C59-50F1-F3A7-7C0277202A22</generatorID>
+<ownerDesignName>logico</ownerDesignName>
+<engineerTo>
+<item key="DDB6BF28-3C5F-0A76-3BC0-6791D3BA8669" value="true"/>
+</engineerTo>
+<sourcePk>6F07CA97-AA02-0FB9-91EB-041EF7965AF7</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>815BB516-67F6-2836-03F0-725DF4738643</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>C8F75723-9802-FAF2-7B04-9EF341911615</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

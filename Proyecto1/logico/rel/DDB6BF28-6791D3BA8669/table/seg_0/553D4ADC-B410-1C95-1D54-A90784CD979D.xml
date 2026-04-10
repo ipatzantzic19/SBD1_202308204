@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="553D4ADC-B410-1C95-1D54-A90784CD979D" name="SECCION">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>5A345784-1643-D5D4-EF7F-DDA23F6EA25E</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SECCION" id="6F1A6EA8-0996-E666-DDA5-6EF0E07D34DB">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>CB772ABF-305A-5A7C-E653-5E3B3AE0960E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>162ED62B-E161-F6B4-6B6E-3B4CE8FBAC19</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ANIO" id="03314107-B383-0D52-17A6-D243E31C0E81">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>D042BE1F-7859-1ED6-8C62-0D2595BC0E4E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>83FF24D9-7160-6BB1-0645-C16F99B7B7EF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CICLO" id="B7C0D6B8-2170-AC15-75D8-A1875F46AAB2">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>39DE9EFB-7132-D4D7-2CBB-A1419D9C99FF</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A1035727-9C01-F5F9-5C41-02966765DAA8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CURSO_CODIGOCURSO" id="0C3C2C4A-A204-D3B8-F936-73CD577559E3">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>18A8FBD7-9A43-C0A4-F4B1-4BE96A052CF7</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="380F2643-D232-F602-107A-58A446E05079" referredColumn="FDA12EB6-F450-793F-A261-CD919C9BDC00"/>
+</associations>
+</Column>
+<Column name="CATEDRATICO_CATEDRATICO" id="B5867A59-352B-7753-7DA0-27B8F8D932F3">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>4EB86979-33EF-94F9-490E-6C39D4E95709</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C15C9590-162B-9538-0968-66546DAEB001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C1E34E13-421F-370F-2F1E-81A202A3CB1F" referredColumn="8F0ED85C-A0C3-B35B-D436-10D518BF45AB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9B83B33F-6B85-0800-86E0-35A8079C66A8" name="PK_SECCION">
+<sourceDDLFile>script.ddl</sourceDDLFile>
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<importedID>2C57580A-ED0B-DB6F-EB14-5375C1C9CCE4</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F1A6EA8-0996-E666-DDA5-6EF0E07D34DB"/>
+<colUsage columnID="03314107-B383-0D52-17A6-D243E31C0E81"/>
+<colUsage columnID="B7C0D6B8-2170-AC15-75D8-A1875F46AAB2"/>
+<colUsage columnID="0C3C2C4A-A204-D3B8-F936-73CD577559E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2E7FF776-95CC-B8D9-8082-1D7FB4B736F8" name="FK_SECCION_CATEDRATICO">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B5867A59-352B-7753-7DA0-27B8F8D932F3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="592B0FC1-DF96-D164-D3DC-3BFD23686D78" name="FK_SECCION_CURSO">
+<createdBy>isai</createdBy>
+<createdTime>2026-03-16 19:21:54 UTC</createdTime>
+<ownerDesignName>logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0C3C2C4A-A204-D3B8-F936-73CD577559E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
