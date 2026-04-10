@@ -35,3 +35,55 @@
 **/*.rvi
 **/.#*
 **/CVS/**
+
+# ========================================
+# Archivos de configuración local (IDE)
+# ========================================
+**/*.local
+**/dl_settings.xml
+**/ChangeRequests.local
+**/dmd_open.local
+**/Objects.local
+**/Diagrams.local
+**/DDLSelection.local
+
+# ========================================
+# Archivos de imagen pesados
+# ========================================
+**/*.pdf
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.gif
+**/*.svg
+**/*.tiff
+Document/img/
+Proyecto1/Document/img/
+practica2/img/
+notacion\ barker/document/img/
+Diagramas_PlantUML/*.pdf
+
+# ========================================
+# Archivos de configuración del IDE
+# ========================================
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+
+# ========================================
+# Archivos temporales
+# ========================================
+*.tmp
+*.swp
+*.swo
+*~
+.~*
+
+# ========================================
+# Node.js (si aplica)
+# ========================================
+node_modules/
+npm-debug.log
+package-lock.json
