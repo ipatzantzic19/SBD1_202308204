@@ -14,7 +14,7 @@ services:
       - oracle-data:/opt/oracle/oradata
       - ./oracle-db/init-scripts:/opt/oracle/scripts/startup
     healthcheck:
-      test: ["CMD-SHELL", "echo 'SELECT 1 FROM DUAL;' | sqlplus -S SYSTEM/${ORACLE_PWD}@//localhost/XE || exit 1"]
+      test: ["CMD-SHELL", "echo 'SELECT 1 FROM DUAL;' | sqlplus -S SYSTEM/${ORACLE_PWD}@//localhost/XEPDB1 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 15

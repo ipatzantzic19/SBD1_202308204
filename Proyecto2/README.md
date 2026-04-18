@@ -54,9 +54,9 @@ cp .env.example .env
 Abre `.env` y establece:
 ```
 ORACLE_PWD=Proyecto123
-DB_USER=c##EVAL
+DB_USER=EVALUACION
 DB_PASSWORD=Proyecto123
-DB_CONNECT_STRING=localhost:1521/XE
+DB_CONNECT_STRING=localhost:1521/XEPDB1
 PORT=3000
 ```
 
@@ -143,8 +143,8 @@ Respuesta esperada:
 | Connection Type | Basic |
 | Host | localhost |
 | Port | 1521 |
-| Database (Service Name) | XE |
-| Username | c##EVAL |
+| Database (Service Name) | XEPDB1 |
+| Username | EVALUACION |
 | Password | Proyecto123 |
 
 4. Click en **Test Connection**
@@ -167,7 +167,7 @@ Debe mostrar los campos Host, Port, Database, Username completados
 
 En el panel izquierdo (Database Navigator):
 ```
-XE → Schemas → C##EVAL → Tables
+XEPDB1 → Schemas → EVALUACION → Tables
 ```
 
 ---

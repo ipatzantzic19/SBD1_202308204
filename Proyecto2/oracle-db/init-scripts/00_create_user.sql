@@ -1,16 +1,23 @@
 -- ============================================================
--- 00_create_user.sql  —  Crear usuario EVALUACION
+-- 00_create_user.sql  —  Crear usuario EVALUACION local en PDB
 -- Sistema: Centros de Evaluación de Manejo — Guatemala
 -- Proyecto 2 · SBD1 · USAC 1S 2026
 -- ============================================================
 
-CREATE USER c##EVAL IDENTIFIED BY "Proyecto123";
-GRANT CONNECT TO c##EVAL;
-GRANT RESOURCE TO c##EVAL;
-GRANT CREATE TABLE TO c##EVAL;
-GRANT CREATE SEQUENCE TO c##EVAL;
-GRANT CREATE PROCEDURE TO c##EVAL;
-ALTER USER c##EVAL QUOTA UNLIMITED ON USERS;
+-- Cambiar contexto al PDB XEPDB1
+ALTER SESSION SET CONTAINER = XEPDB1;
+
+-- Crear usuario local en el PDB (sin prefijo c##)
+CREATE USER EVALUACION IDENTIFIED BY "Proyecto123";
+
+-- Otorgar permisos necesarios
+GRANT CREATE SESSION TO EVALUACION;
+GRANT CONNECT TO EVALUACION;
+GRANT RESOURCE TO EVALUACION;
+GRANT CREATE TABLE TO EVALUACION;
+GRANT CREATE SEQUENCE TO EVALUACION;
+GRANT CREATE PROCEDURE TO EVALUACION;
+GRANT UNLIMITED TABLESPACE TO EVALUACION;
 
 COMMIT;
 /
