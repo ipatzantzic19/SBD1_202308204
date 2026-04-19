@@ -74,15 +74,25 @@ SBD1B_1S2026_#carnet/
 ### Conexión Oracle (db.js)
 ```javascript
 const oracledb = require('oracledb');
-oracledb.initOracleClient(); // thick mode si se necesita
+require('dotenv').config();
+
+// Modo thin: funciona sin Oracle Client instalado
+// oracledb.initOracleClient(); // Descomenta solo si tienes Oracle Client
 
 async function getConnection() {
-  return await oracledb.getConnection({
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    connectString: process.env.DB_CONNECT_STRING
-  });
+  try {
+    const connection = await oracledb.getConnection({
+      user: process.env.DB_USER,        // EVALUACION
+      password: process.env.DB_PASSWORD,
+      connectString: process.env.DB_CONNECT_STRING // localhost:1521/XEPDB1
+    });
+    return connection;
+  } catch (err) {
+    console.error('Error de conexión a Oracle:', err);
+    throw err;
+  }
 }
+
 module.exports = { getConnection };
 ```
 

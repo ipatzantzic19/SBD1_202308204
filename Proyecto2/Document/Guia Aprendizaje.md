@@ -99,13 +99,14 @@ Este archivo le dice a Git qué NO subir a GitHub (contraseñas, librerías enor
 
 Crea `.env` en la raíz:
 ```env
-ORACLE_PWD=TuPassword123
-DB_USER=SYSTEM
-DB_PASSWORD=TuPassword123
-DB_CONNECT_STRING=localhost:1521/XE
+ORACLE_PWD=Proyecto123
+DB_USER=EVALUACION
+DB_PASSWORD=Proyecto123
+DB_CONNECT_STRING=localhost:1521/XEPDB1
 PORT=3000
 ```
-> ⚠️ Usa una contraseña que tenga mayúsculas, minúsculas y números. Oracle XE la requiere así.
+> ⚠️ Usa una contraseña que tenga mayúsculas, minúsculas y números. Oracle XE la requiere así.  
+> ✅ `EVALUACION` es un usuario local del PDB (sin prefijo `c##`)
 
 ## Paso 1.4 — Crear el docker-compose.yml
 
@@ -128,7 +129,7 @@ services:
       - oracle-data:/opt/oracle/oradata
       - ./oracle-db/init-scripts:/opt/oracle/scripts/startup
     healthcheck:
-      test: ["CMD-SHELL", "echo 'SELECT 1 FROM DUAL;' | sqlplus -S SYSTEM/${ORACLE_PWD}@//localhost/XE"]
+      test: ["CMD-SHELL", "echo 'SELECT 1 FROM DUAL;' | sqlplus -S EVALUACION/${ORACLE_PWD}@//localhost/XEPDB1"]
       interval: 30s
       timeout: 10s
       retries: 15
@@ -467,8 +468,8 @@ DATABASE IS READY TO USE!
 4. Completa los campos:
    - **Host:** localhost
    - **Port:** 1521
-   - **Database (Service Name):** XE
-   - **Username:** SYSTEM
+   - **Database (Service Name):** XEPDB1
+   - **Username:** EVALUACION
    - **Password:** (la que pusiste en .env)
 5. Clic en **Test Connection** — debe decir "Connected" ✅
 6. Clic en **Finish**
@@ -476,8 +477,8 @@ DATABASE IS READY TO USE!
 ## Paso 2.2 — Verificar tablas
 
 En el panel izquierdo de DBeaver:
-- Expande tu conexión → Other users → SYSTEM → Tables
-- Deberías ver todas las tablas creadas por el DDL
+- Expande: **XEPDB1** → **Schemas** → **EVALUACION** → **Tables**
+- Deberías ver todas las 12 tablas creadas por el DDL
 
 ## Paso 2.3 — Ver datos
 
@@ -977,13 +978,13 @@ docker logs oracle-xe-evaluacion
 ```
 
 ## Error ORA-01017 (credenciales incorrectas)
-- Oracle guarda usuarios en MAYÚSCULAS: `SYSTEM`, no `system`
+- Oracle guarda usuarios en MAYÚSCULAS: `EVALUACION`, no `evaluacion`
 - Verifica tu `.env` y que la contraseña cumpla requisitos de Oracle
 
 ## La API no conecta a Oracle
 - Verifica que Oracle esté corriendo: `docker ps`
-- El `connectString` en `.env` debe ser `localhost:1521/XE` (no `oracle-db` cuando corres Node.js local)
-- Si corres Node.js también en Docker, entonces sí usar `oracle-db:1521/XE`
+- El `connectString` en `.env` debe ser `localhost:1521/XEPDB1` (no `oracle-db` cuando corres Node.js local)
+- Si corres Node.js también en Docker, entonces sí usar `oracle-db:1521/XEPDB1`
 
 ## NJS-006 o errores de binding
 - Asegúrate de pasar los parámetros como objeto: `{ id: value }` no solo `[value]`

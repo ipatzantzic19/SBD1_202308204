@@ -1,10 +1,13 @@
-const oracledb = require('oracledb');
-require('dotenv').config();
+import oracledb from 'oracledb';
+import { config } from 'dotenv';
 
-// Modo thick: necesario para Oracle XE en contenedores
+// Cargar variables de entorno
+config();
+
+// Modo thin: necesario para Oracle XE en contenedores
 // oracledb.initOracleClient(); // Descomenta si tienes Oracle Client instalado
 
-async function getConnection() {
+export async function getConnection() {
   try {
     const connection = await oracledb.getConnection({
       user: process.env.DB_USER,
@@ -17,5 +20,3 @@ async function getConnection() {
     throw err;
   }
 }
-
-module.exports = { getConnection };

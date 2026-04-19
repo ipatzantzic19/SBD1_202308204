@@ -52,13 +52,15 @@ cp .env.example .env
 ```
 
 Abre `.env` y establece:
-```
+```env
 ORACLE_PWD=Proyecto123
 DB_USER=EVALUACION
 DB_PASSWORD=Proyecto123
 DB_CONNECT_STRING=localhost:1521/XEPDB1
 PORT=3000
 ```
+
+✅ **Nota:** El usuario `EVALUACION` es un usuario local del PDB (sin prefijo `c##`), lo que garantiza compatibilidad total con las referencias en los scripts SQL.
 
 > ⚠️ La contraseña de Oracle debe tener al menos 8 caracteres, una mayúscula, una minúscula y un número.
 
@@ -136,7 +138,7 @@ Respuesta esperada:
 2. Menú **Database** → **New Database Connection**
 3. Selecciona **Oracle** → click **Next**
 
-### Paso 2 — Configurar parámetros
+### Paso 2 — Configurar parámetros de conexión
 
 | Campo | Valor |
 |-------|-------|
@@ -146,6 +148,7 @@ Respuesta esperada:
 | Database (Service Name) | XEPDB1 |
 | Username | EVALUACION |
 | Password | Proyecto123 |
+| **Driver** | **Oracle** (thin o thick) |
 
 4. Click en **Test Connection**
 
@@ -165,9 +168,24 @@ Debe mostrar los campos Host, Port, Database, Username completados
 
 ### Paso 3 — Explorar las tablas
 
-En el panel izquierdo (Database Navigator):
+En el panel izquierdo (Database Navigator) de DBeaver:
 ```
-XEPDB1 → Schemas → EVALUACION → Tables
+XEPDB1 (conectado como EVALUACION)
+  └── Schemas
+      └── EVALUACION
+          └── Tables (12 tablas)
+              ├── DEPARTAMENTO
+              ├── MUNICIPIO
+              ├── CENTRO
+              ├── ESCUELA
+              ├── UBICACION
+              ├── REGISTRO
+              ├── CORRELATIVO
+              ├── EXAMEN
+              ├── PREGUNTAS
+              ├── PREGUNTAS_PRACTICO
+              ├── RESPUESTA_USUARIO
+              └── RESPUESTA_PRACTICO_USUARIO
 ```
 
 ---
@@ -254,6 +272,27 @@ Para cada entidad, se exponen los siguientes métodos:
 | GET | `/api/estadisticas/por-centro` | Estadísticas por centro y escuela |
 | GET | `/api/estadisticas/ranking` | Ranking de evaluados |
 | GET | `/api/estadisticas/pregunta-menor-aciertos` | Pregunta con menor % de aciertos |
+
+---
+
+---
+
+## 📊 Estado del Proyecto
+
+### ✅ Completado
+- **Oracle XE 21.3.0** corriendo en contenedor Docker
+- **12 Tablas** creadas automáticamente con DDL
+- **Datos de prueba** insertados en todas las tablas (DML)
+- **Usuario local** `EVALUACION` creado en PDB `XEPDB1`
+- **Conexión verificada** desde DBeaver
+- **Permisos** correctamente configurados
+
+### ⏳ Próximos pasos
+1. Instalar dependencias Node.js: `npm install`
+2. Crear rutas CRUD para las 12 entidades
+3. Implementar 3 endpoints de estadísticas SQL
+4. Probar en Postman
+5. Documentar capturas de evidence
 
 ---
 

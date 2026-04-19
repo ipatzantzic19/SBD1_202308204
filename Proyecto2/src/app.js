@@ -1,28 +1,29 @@
-const express = require('express');
-const dotenv = require('dotenv');
+import express, { json } from 'express'; 
+import { config } from 'dotenv';    
 
 // Cargar variables de entorno
-dotenv.config();
+config();
 
+// Crear instancia de Express
 const app = express();
 
 // Middleware para parsear JSON en el body de las peticiones
-app.use(express.json());
+app.use(json());
 
 // Importar rutas
-const departamentoRoutes = require('./routes/departamento');
-const municipioRoutes    = require('./routes/municipio');
-const centroRoutes       = require('./routes/centro');
-const escuelaRoutes      = require('./routes/escuela');
-const ubicacionRoutes    = require('./routes/ubicacion');
-const registroRoutes     = require('./routes/registro');
-const correlativoRoutes  = require('./routes/correlativo');
-const examenRoutes       = require('./routes/examen');
-const preguntasRoutes    = require('./routes/preguntas');
-const preguntasPracticoRoutes = require('./routes/preguntasPractico');
-const respuestaUsuarioRoutes  = require('./routes/respuestaUsuario');
-const respuestaPracticoRoutes = require('./routes/respuestaPracticoUsuario');
-const estadisticasRoutes      = require('./routes/estadisticas');
+import departamentoRoutes from './routes/departamento.js';
+import municipioRoutes from './routes/municipio.js';
+import centroRoutes from './routes/centro.js';
+import escuelaRoutes from './routes/escuela.js';
+import ubicacionRoutes from './routes/ubicacion.js';
+import registroRoutes from './routes/registro.js';
+import correlativoRoutes from './routes/correlativo.js';
+import examenRoutes from './routes/examen.js';
+import preguntasRoutes from './routes/preguntas.js';
+import preguntasPracticoRoutes from './routes/preguntasPractico.js';
+import respuestaUsuarioRoutes from './routes/respuestaUsuario.js';
+import respuestaPracticoRoutes from './routes/respuestaPracticoUsuario.js';
+import estadisticasRoutes from './routes/estadisticas.js';
 
 // Registrar rutas con prefijo /api
 app.use('/api/departamentos',       departamentoRoutes);
@@ -40,7 +41,7 @@ app.use('/api/respuestas-practico', respuestaPracticoRoutes);
 app.use('/api/estadisticas',        estadisticasRoutes);
 
 // Ruta de prueba
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
   res.json({ message: 'API Centros de Evaluación de Manejo - SBD1 2026' });
 });
 
