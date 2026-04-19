@@ -51,7 +51,7 @@
 # Archivos de imagen pesados
 # ========================================
 **/*.pdf
-**/*.png
+
 **/*.jpg
 **/*.jpeg
 **/*.gif

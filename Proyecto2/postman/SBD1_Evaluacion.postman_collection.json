@@ -1,0 +1,501 @@
+{
+  "info": {
+    "name": "SBD1 - Centros de Evaluación de Manejo",
+    "description": "Colección de pruebas para API REST del Sistema de Centros de Evaluación de Manejo\nCurso: Sistemas de Bases de Datos 1\nUSAC 1S 2026",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "🏢 DEPARTAMENTOS",
+      "item": [
+        {
+          "name": "GET - Listar todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/departamentos",
+              "host": ["{{base_url}}"],
+              "path": ["api", "departamentos"]
+            }
+          }
+        },
+        {
+          "name": "GET - Por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/departamentos/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "departamentos", "1"]
+            }
+          }
+        },
+        {
+          "name": "POST - Crear",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Quetzaltenango\",\n  \"codigo\": \"09\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/departamentos",
+              "host": ["{{base_url}}"],
+              "path": ["api", "departamentos"]
+            }
+          }
+        },
+        {
+          "name": "PUT - Actualizar",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Guatemala Actualizado\",\n  \"codigo\": \"01\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/departamentos/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "departamentos", "1"]
+            }
+          }
+        },
+        {
+          "name": "DELETE - Eliminar",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/departamentos/22",
+              "host": ["{{base_url}}"],
+              "path": ["api", "departamentos", "22"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "🏙️ MUNICIPIOS",
+      "item": [
+        {
+          "name": "GET - Listar todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/municipios",
+              "host": ["{{base_url}}"],
+              "path": ["api", "municipios"]
+            }
+          }
+        },
+        {
+          "name": "GET - Por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/municipios/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "municipios", "1"]
+            }
+          }
+        },
+        {
+          "name": "POST - Crear",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"San Lucas Sacatepéquez\",\n  \"codigo\": \"05\",\n  \"departamento_id_departamento\": 2\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/municipios",
+              "host": ["{{base_url}}"],
+              "path": ["api", "municipios"]
+            }
+          }
+        },
+        {
+          "name": "PUT - Actualizar",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Guatemala Ciudad\",\n  \"codigo\": \"01\",\n  \"departamento_id_departamento\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/municipios/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "municipios", "1"]
+            }
+          }
+        },
+        {
+          "name": "DELETE - Eliminar",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/municipios/5",
+              "host": ["{{base_url}}"],
+              "path": ["api", "municipios", "5"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "🏛️ CENTROS",
+      "item": [
+        {
+          "name": "GET - Listar todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/centros",
+              "host": ["{{base_url}}"],
+              "path": ["api", "centros"]
+            }
+          }
+        },
+        {
+          "name": "POST - Crear",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Centro de Evaluación Nueva Zona\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/centros",
+              "host": ["{{base_url}}"],
+              "path": ["api", "centros"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "🎓 ESCUELAS",
+      "item": [
+        {
+          "name": "GET - Listar todas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/escuelas",
+              "host": ["{{base_url}}"],
+              "path": ["api", "escuelas"]
+            }
+          }
+        },
+        {
+          "name": "POST - Crear",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Nueva Escuela de Manejo\",\n  \"direccion\": \"Dirección completa aquí\",\n  \"acuerdo\": \"ESC-NEM-004\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/escuelas",
+              "host": ["{{base_url}}"],
+              "path": ["api", "escuelas"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "📍 UBICACIONES",
+      "item": [
+        {
+          "name": "GET - Listar todas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/ubicaciones",
+              "host": ["{{base_url}}"],
+              "path": ["api", "ubicaciones"]
+            }
+          }
+        },
+        {
+          "name": "POST - Asociar escuela a centro",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"escuela_id_escuela\": 1,\n  \"centro_id_centro\": 3\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/ubicaciones",
+              "host": ["{{base_url}}"],
+              "path": ["api", "ubicaciones"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "👤 REGISTROS",
+      "item": [
+        {
+          "name": "GET - Listar todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/registros",
+              "host": ["{{base_url}}"],
+              "path": ["api", "registros"]
+            }
+          }
+        },
+        {
+          "name": "POST - Crear registro",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Carlos García\",\n  \"apellido\": \"López\",\n  \"fecha_nacimiento\": \"1990-05-15\",\n  \"numero_licencia\": \"LIC-2024-001\",\n  \"municipio_id_municipio\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/registros",
+              "host": ["{{base_url}}"],
+              "path": ["api", "registros"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "🔢 CORRELATIVOS",
+      "item": [
+        {
+          "name": "GET - Listar todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/correlativos",
+              "host": ["{{base_url}}"],
+              "path": ["api", "correlativos"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "📝 EXÁMENES",
+      "item": [
+        {
+          "name": "GET - Listar todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/examenes",
+              "host": ["{{base_url}}"],
+              "path": ["api", "examenes"]
+            }
+          }
+        },
+        {
+          "name": "POST - Crear examen",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"puntaje_teorico\": 85,\n  \"puntaje_practico\": 90,\n  \"resultado\": \"APROBADO\",\n  \"registro_id_registro\": 1,\n  \"correlativo_id_correlativo\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/examenes",
+              "host": ["{{base_url}}"],
+              "path": ["api", "examenes"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "❓ PREGUNTAS",
+      "item": [
+        {
+          "name": "GET - Listar todas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/preguntas",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "❓ PREGUNTAS PRÁCTICO",
+      "item": [
+        {
+          "name": "GET - Listar todas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/preguntas-practico",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas-practico"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "✅ RESPUESTAS USUARIO",
+      "item": [
+        {
+          "name": "GET - Listar todas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-usuario",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-usuario"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "✅ RESPUESTAS PRÁCTICO",
+      "item": [
+        {
+          "name": "GET - Listar todas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-practico",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-practico"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "📊 ESTADÍSTICAS (Consultas)",
+      "item": [
+        {
+          "name": "CONSULTA 1 - Estadísticas por Centro",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "description": "Obtiene estadísticas por centro y escuela:\n- Total de exámenes realizados\n- Promedio teórico en porcentaje\n- Promedio práctico\n- Total de aprobados",
+            "url": {
+              "raw": "{{base_url}}/api/estadisticas/por-centro",
+              "host": ["{{base_url}}"],
+              "path": ["api", "estadisticas", "por-centro"]
+            }
+          }
+        },
+        {
+          "name": "CONSULTA 2 - Ranking de Evaluados",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "description": "Obtiene ranking de personas evaluadas ordenadas por puntaje total (descendente):\n- Nombre completo\n- Puntaje teórico\n- Puntaje práctico\n- Puntaje total\n- Resultado (APROBADO/REPROBADO)",
+            "url": {
+              "raw": "{{base_url}}/api/estadisticas/ranking",
+              "host": ["{{base_url}}"],
+              "path": ["api", "estadisticas", "ranking"]
+            }
+          }
+        },
+        {
+          "name": "CONSULTA 3 - Pregunta con Menor % de Aciertos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "description": "Identifica la pregunta con el menor porcentaje de aciertos:\n- ID de pregunta\n- Texto de la pregunta\n- Total de respuestas\n- Total de aciertos\n- Porcentaje de aciertos\n- Respuesta correcta",
+            "url": {
+              "raw": "{{base_url}}/api/estadisticas/pregunta-menor-aciertos",
+              "host": ["{{base_url}}"],
+              "path": ["api", "estadisticas", "pregunta-menor-aciertos"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ]
+}

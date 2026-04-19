@@ -1,0 +1,42 @@
+[
+    [
+        "Centro de Evaluaci��n Antigua Guatemala",
+        "Academia Vial GuateDrive",
+        1,
+        null,
+        null,
+        0
+    ],
+    [
+        "Centro de Evaluaci��n Antigua Guatemala",
+        "Escuela de Manejo AutoMaster",
+        1,
+        0,
+        50,
+        0
+    ],
+    [
+        "Centro de Evaluaci��n Escuintla",
+        "Instituto de Conducci��n Segura",
+        1,
+        null,
+        null,
+        0
+    ],
+    [
+        "Centro de Evaluaci��n Zona 12",
+        "Academia Vial GuateDrive",
+        1,
+        0,
+        15,
+        0
+    ],
+    [
+        "Centro de Evaluaci��n Zona 12",
+        "Escuela de Manejo AutoMaster",
+        1,
+        50,
+        31,
+        1
+    ]
+]

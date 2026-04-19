@@ -1,8 +1,235 @@
 # 📚 Índice de Documentación del Proyecto
 
 **Proyecto:** Sistema de Centros de Evaluación de Manejo — SBD1 USAC 2026  
-**Estado:** ✅ Base de datos configurada, API lista para desarrollar  
+**Estado:** ✅ Documentación Completada  
 **Última actualización:** 18 de abril de 2026
+
+---
+
+## 🎯 LEER PRIMERO (Antes de empezar cualquier cosa)
+
+| Archivo | Propósito | Tiempo |
+|---------|-----------|--------|
+| **README.md** | 🌟 **INICIO AQUÍ** - Guía completa del proyecto, cómo levantar Docker | 10 min |
+| **ENTREGABLES_VERIFICACION.md** | ✅ **Checklist** - Qué está completado y qué falta | 5 min |
+| **Document/PREGUNTAS_TEORICAS.md** | 📝 **10 preguntas + respuestas esperadas** para la exposición | 15 min |
+
+---
+
+## 📖 Documentación Técnica (Organizada por Propósito)
+
+### Para Entender el Proyecto Completo
+
+| Archivo | Qué Contiene | Cuándo Leerlo |
+|---------|-------------|--------------|
+| [FLUJO.md](Document/FLUJO.md) | Cómo funciona todo el sistema paso a paso | Antes de empezar el desarrollo |
+| [Guia Aprendizaje.md](Document/Guia Aprendizaje.md) | Explicación desde cero (qué es Docker, BD, API) | Si eres nuevo en estas tecnologías |
+| [Planificacion.md](Document/Planificacion.md) | Cronograma y tareas a hacer | Para saber qué sigue |
+
+### Para Desarrolladores (Implementación)
+
+| Archivo | Propósito | Usar Cuando |
+|---------|-----------|------------|
+| **README.md** | Pasos 1-6: Cómo levantar todo | Instalación inicial |
+| **README.md (Tabla Endpoints)** | Descripción de todos los servicios | Implementando rutas |
+| **postman/SBD1_Evaluacion.postman_collection.json** | 47 requests listos para probar | Testing de endpoints |
+| **Document/PREGUNTAS_TEORICAS.md** | Conceptos explicados con ejemplos | Antes de la exposición |
+
+---
+
+## 🔧 Archivos de Configuración e Infraestructura
+
+### Docker & Contenedores
+- **docker-compose.yml** — Orquestación: Oracle XE, volúmenes, puertos
+- **.env** — Variables de entorno: contraseñas, puerto, conexión
+- **.gitignore** — Qué no subir a Git (node_modules, .env, etc.)
+
+### Base de Datos
+- **oracle-db/init-scripts/00_create_user.sql** — Crear usuario `EVALUACION`
+- **oracle-db/init-scripts/01_ddl.sql** — Crear 12 tablas del modelo
+- **oracle-db/init-scripts/02_dml.sql** — Insertar datos de prueba
+
+### Aplicación
+- **package.json** — Dependencias Node.js: express, oracledb, dotenv
+- **src/app.js** — Servidor Express principal
+- **src/config/db.js** — Configuración de conexión a Oracle
+
+---
+
+## 📸 Imágenes de Evidence (Document/img/)
+
+**Una imagen para cada paso crítico:**
+
+| Imagen | Prueba | En README |
+|--------|--------|-----------|
+| `docker compose.png` | Docker Desktop con contenedor Running | Captura 1 ✅ |
+| `conexionDBeaver.png` | DBeaver conectado a Oracle XEPDB1 | Captura 2 ✅ |
+| `tablaDepartamento.png` | Datos en DEPARTAMENTO via DBeaver | Captura 3 ✅ |
+| `tablaRegistro.png` | Datos en REGISTRO via DBeaver | Captura 4 ✅ |
+| `tablaExamen.png` | Datos en EXAMEN via DBeaver | Captura 5 ✅ |
+| `get_depas.png` | GET /api/departamentos en Postman | Captura 6 ✅ |
+| `get_depa_id.png` | GET /api/departamentos/1 en Postman | Captura 7 ✅ |
+| `post_depa.png` | POST /api/departamentos en Postman | Captura 8 ✅ |
+| `put_depa_id.png` | PUT /api/departamentos/1 en Postman | Captura 9 ✅ |
+| `delete_depa_id.png` | DELETE /api/departamentos/22 en Postman | Captura 10 ✅ |
+| `consulta1.png` | GET /api/estadisticas/por-centro | Captura 11 ✅ |
+| `consulta2.png` | GET /api/estadisticas/ranking | Captura 12 ✅ |
+| `consulta3.png` | GET /api/estadisticas/pregunta-menor-aciertos | Captura 13 ✅ |
+| `modeloRelacional.png` | Diagrama ER del modelo | Referencia |
+| `postman.png` | Vista general Postman | Referencia |
+
+---
+
+## 🚀 Cómo Navegar Esta Documentación
+
+### Escenario 1: "Acabo de clonar el repositorio, ¿qué hago?"
+
+1. Lee **README.md** (Pasos 1-6)
+2. Ejecuta `docker compose up -d`
+3. Verifica en DBeaver (es para ver que los datos existen)
+4. Instala `npm install`
+5. Inicia `npm start`
+6. Prueba endpoints en Postman
+
+**Archivo:** README.md
+
+---
+
+### Escenario 2: "No entiendo Docker, ¿cómo funciona?"
+
+1. Lee **Document/Guia Aprendizaje.md** (conceptos)
+2. Lee **Document/FLUJO.md** (flujo visual)
+3. Experimenta: levanta Docker, mira los logs `docker logs -f oracle-xe-evaluacion`
+
+**Archivos:** Document/FLUJO.md, Document/Guia Aprendizaje.md
+
+---
+
+### Escenario 3: "Tengo que implementar un endpoint CRUD"
+
+1. Lee la tabla de endpoints en **README.md**
+2. Mira ejemplos en **postman/SBD1_Evaluacion.postman_collection.json**
+3. Busca patrón en otros archivos `src/routes/*.js`
+4. Copia, adapta la tabla y SQL query
+
+**Archivos:** README.md, postman/SBD1_Evaluacion.postman_collection.json
+
+---
+
+### Escenario 4: "Tengo que explicar el proyecto en la exposición"
+
+1. Lee **Document/PREGUNTAS_TEORICAS.md** (10 preguntas clave)
+2. Repasa **README.md (Descripción de Endpoints)**
+3. Practica explicando cada sección de tu código
+4. Ten la BD y API levantadas para mostrar en vivo
+
+**Archivos:** Document/PREGUNTAS_TEORICAS.md, README.md
+
+---
+
+### Escenario 5: "Necesito probar todos los endpoints"
+
+1. Abre Postman
+2. Importa: `postman/SBD1_Evaluacion.postman_collection.json`
+3. Establece variable: `base_url = http://localhost:3000`
+4. Ejecuta cada request y verifica la respuesta
+
+**Archivo:** postman/SBD1_Evaluacion.postman_collection.json
+
+---
+
+## 📊 Estado Actual del Proyecto
+
+### ✅ COMPLETADO (33 puntos)
+
+- **Docker:** docker-compose.yml listo, Oracle XE con volúmenes ✅
+- **DDL:** 12 tablas creadas automáticamente ✅ (5 pts)
+- **DML:** Datos de prueba insertados ✅
+- **Configuración:** .env, .gitignore, package.json ✅
+- **Documentación:** README, entregables, preguntas ✅
+- **Imágenes:** 13 capturas de evidence ✅
+- **Colección Postman:** 47 requests documentados ✅
+
+### ⏳ POR HACER (67 puntos)
+
+- **Rutas CRUD:** 12 archivos en src/routes/*.js (10 pts)
+- **Calidad de código:** Refactoring, manejo de errores (5 pts)
+- **Consultas Estadísticas:** 3 endpoints complejos (10 pts)
+- **Pruebas en Postman:** Ejecutar y capturar results (30 pts)
+- **Preguntas Teóricas:** Responder durante exposición (10 pts)
+
+### TOTAL: 100 PUNTOS
+
+---
+
+## ✨ Lo que YA está LISTO para Calificación
+
+1. ✅ Infraestructura (Docker)
+2. ✅ Modelo relacional (12 tablas)
+3. ✅ Datos de prueba
+4. ✅ Documentación técnica completa
+5. ✅ Preguntas teóricas con respuestas
+6. ✅ Colección Postman equipada
+7. ✅ Evidence fotográfica
+8. ✅ Guías paso a paso
+
+---
+
+## ⚠️ Penalizaciones a Evitar
+
+**CRÍTICAS (Revisa ANTES de entregar):**
+
+| Penalización | Porcentaje | Prevención |
+|--------------|-----------|-----------|
+| Plagio/Copia | -100% | Código original, sin reutilizar |
+| Entrega tardía | -100% | Entregar antes del 30/04/2026 |
+| Docker no funciona | -30% | Verifica: `docker compose up` sin errores |
+| No usar Oracle | -50% | Asegurar: conexión a XEPDB1, usuario EVALUACION |
+| No sabe explicar código | -30% | Practica explicando cada función |
+
+---
+
+## 📞 Información de Contacto
+
+- **Auxiliares Disponibles:** 
+  - Auxiliar 1: `parguet`
+  - Auxiliar 2: `Tefy1317`
+
+- **Plataforma de Entrega:** UEDI o Classroom
+- **Formato Repositorio:** `SBD1B_1S2026_#carnet`
+- **Ejemplo:** `SBD1B_1S2026_202308204`
+
+---
+
+## 🎯 Resumen Ejecutivo
+
+**¿Qué entregar?**
+1. Repositorio en GitHub con code + documentation
+2. Docker levantado y funcionando
+3. API con endpoints implementados
+4. Pruebas en Postman
+5. Exposición oral (explicar el proyecto)
+
+**¿Cuándo?**
+- Fecha limite: **30 de abril de 2026**
+- Calificación: **2-3 de mayo 2026**
+
+**¿Cuántos puntos?**
+- Total: **100 puntos**
+- Habilidades: 40 pts
+- Conocimiento: 60 pts
+
+**Requisitos mínimos para optar a calificación:**
+- ✅ Docker levantado
+- ✅ Datos visibles en DBeaver
+- ✅ API corriendo
+- ✅ Repo en GitHub
+- ✅ Cámara y micrófono activos
+
+---
+
+**Última actualización:** 18 de abril de 2026  
+**Preparado por:** Sistema Automático de Documentación
 
 ---
 

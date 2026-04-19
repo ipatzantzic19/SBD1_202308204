@@ -1,0 +1,42 @@
+[
+    [
+        1,
+        "Juan Carlos L��pez Garc��a",
+        50,
+        31,
+        81,
+        "APROBADO"
+    ],
+    [
+        2,
+        "Mar��a Elena Rodr��guez Morales",
+        0,
+        50,
+        50,
+        "REPROBADO"
+    ],
+    [
+        3,
+        "Carlos Alberto M��ndez Castillo",
+        0,
+        15,
+        15,
+        "REPROBADO"
+    ],
+    [
+        4,
+        "Ana Sof��a Guerrero D��az",
+        0,
+        0,
+        0,
+        "REPROBADO"
+    ],
+    [
+        4,
+        "Pedro Jos�� Hern��ndez Ruiz",
+        0,
+        0,
+        0,
+        "REPROBADO"
+    ]
+]

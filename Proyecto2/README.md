@@ -1,8 +1,10 @@
 # 🚗 Sistema de Centros de Evaluación de Manejo
 
 **Curso:** Sistemas de Bases de Datos 1 — USAC 1S 2026  
-**Carnet:** `[TU CARNET AQUÍ]`  
-**Nombre:** `[TU NOMBRE COMPLETO AQUÍ]`
+**Carnet:** `202308204`  
+**Nombre:** `[TU NOMBRE COMPLETO AQUÍ]`  
+**Ponderación:** 35.72 pts  
+**Tiempo Estimado:** 48 hrs/min
 
 ---
 
@@ -88,10 +90,9 @@ DATABASE IS READY TO USE!
 
 ### 📸 Captura 1 — Docker Desktop mostrando contenedor activo
 
-```
-[INSERTAR CAPTURA DE DOCKER DESKTOP AQUÍ]
-Debe mostrar el contenedor "oracle-xe-evaluacion" con estado "Running"
-```
+![Docker Compose - Contenedor cargando](./Document/img/docker\ compose.png)
+
+**Estado esperado:** El contenedor `oracle-xe-evaluacion` debe estar en estado `Running` (Verde).
 
 ---
 
@@ -156,10 +157,9 @@ Respuesta esperada:
 
 ### 📸 Captura 2 — DBeaver: pantalla de configuración de conexión
 
-```
-[INSERTAR CAPTURA DE LA PANTALLA DE CONFIGURACIÓN DE DBEAVER AQUÍ]
-Debe mostrar los campos Host, Port, Database, Username completados
-```
+![Conexión DBeaver configurada](./Document/img/conexionDBeaver.png)
+
+**Verificar:** Los parámetros deben coincidir exactamente con la tabla anterior.
 
 ---
 
@@ -190,45 +190,27 @@ XEPDB1 (conectado como EVALUACION)
 
 ---
 
-### 📸 Captura 3 — DBeaver: tablas del modelo visible en el navigator
+### 📸 Captura 3 — DBeaver: Datos en tabla DEPARTAMENTO
 
-```
-[INSERTAR CAPTURA DEL DATABASE NAVIGATOR DE DBEAVER AQUÍ]
-Debe mostrar las 12 tablas del modelo relacional expandidas
-```
+![Tabla Departamento en DBeaver](./Document/img/tablaDepartamento.png)
 
----
-
-### Paso 4 — Ver datos en las tablas
-
-Clic derecho sobre cualquier tabla → **"Read Data"**
+**Verificar:** Deben aparecer los 3 departamentos: Guatemala, Sacatepéquez, Escuintla.
 
 ---
 
-### 📸 Captura 4 — DBeaver: datos en tabla DEPARTAMENTO
+### 📸 Captura 4 — DBeaver: Datos en tabla REGISTRO
 
-```
-[INSERTAR CAPTURA DE LOS DATOS EN LA TABLA DEPARTAMENTO AQUÍ]
-Debe mostrar las 3 filas insertadas por el DML
-```
+![Tabla Registro en DBeaver](./Document/img/tablaRegistro.png)
 
----
-
-### 📸 Captura 5 — DBeaver: datos en tabla REGISTRO
-
-```
-[INSERTAR CAPTURA DE LOS DATOS EN LA TABLA REGISTRO AQUÍ]
-Debe mostrar los 5 registros de personas evaluadas
-```
+**Verificar:** Deben aparecer los registros de personas evaluadas.
 
 ---
 
-### 📸 Captura 6 — DBeaver: datos en tabla EXAMEN
+### 📸 Captura 5 — DBeaver: Datos en tabla EXAMEN
 
-```
-[INSERTAR CAPTURA DE LOS DATOS EN LA TABLA EXAMEN AQUÍ]
-Debe mostrar los 5 exámenes creados
-```
+![Tabla Examen en DBeaver](./Document/img/tablaExamen.png)
+
+**Verificar:** Deben aparecer los exámenes creados con sus respectivos puntajes.
 
 ---
 
@@ -304,68 +286,79 @@ Para cada entidad, se exponen los siguientes métodos:
 
 ---
 
-### 📸 Captura 7 — Postman: GET /api/departamentos (200 OK)
+### 📸 Captura 6 — Postman: GET /api/departamentos (200 OK)
 
-```
-[INSERTAR CAPTURA DE POSTMAN CON RESPUESTA EXITOSA AQUÍ]
-Debe mostrar status 200 y el array JSON con los 3 departamentos
-```
+![GET Departamentos en Postman](./Document/img/get_depas.png)
+
+**Respuesta esperada:** Array JSON con los 3 departamentos.
 
 ---
 
-### Prueba 2 — POST crear municipio
+### Prueba 2 — GET un departamento específico (ID=1)
 
-**Request:** `POST http://localhost:3000/api/municipios`
+**Request:** `GET http://localhost:3000/api/departamentos/1`
+
+---
+
+### 📸 Captura 7 — Postman: GET /api/departamentos/:id (200 OK)
+
+![GET Departamento ID en Postman](./Document/img/get_depa_id.png)
+
+---
+
+### Prueba 3 — POST crear departamento
+
+**Request:** `POST http://localhost:3000/api/departamentos`
 
 **Body:**
 ```json
 {
-  "nombre": "San Lucas Sacatepéquez",
-  "codigo": "05",
-  "departamento_id_departamento": 2
+  "nombre": "Quetzaltenango",
+  "codigo": "09"
 }
 ```
 
 ---
 
-### 📸 Captura 8 — Postman: POST /api/municipios (201 Created)
+### 📸 Captura 8 — Postman: POST /api/departamentos (201 Created)
 
-```
-[INSERTAR CAPTURA DE POSTMAN CON RESPUESTA 201 AQUÍ]
-Debe mostrar el nuevo registro creado con su id generado
+![POST Departamento en Postman](./Document/img/post_depa.png)
+
+---
+
+### Prueba 4 — PUT actualizar departamento
+
+**Request:** `PUT http://localhost:3000/api/departamentos/1`
+
+**Body:**
+```json
+{
+  "nombre": "Guatemala Actualizado",
+  "codigo": "01"
+}
 ```
 
 ---
 
-### Prueba 3 — PUT actualizar escuela
+### 📸 Captura 9 — Postman: PUT /api/departamentos/:id (200 OK)
 
-**Request:** `PUT http://localhost:3000/api/escuelas/1`
-
----
-
-### 📸 Captura 9 — Postman: PUT /api/escuelas/:id (200 OK)
-
-```
-[INSERTAR CAPTURA DE POSTMAN CON RESPUESTA DE ACTUALIZACIÓN AQUÍ]
-```
+![PUT Departamento en Postman](./Document/img/put_depa_id.png)
 
 ---
 
-### Prueba 4 — DELETE eliminar registro
+### Prueba 5 — DELETE eliminar departamento
 
-**Request:** `DELETE http://localhost:3000/api/departamentos/6`
-
----
-
-### 📸 Captura 10 — Postman: DELETE (200 OK o 404)
-
-```
-[INSERTAR CAPTURA DEL DELETE EXITOSO O ERROR 404 AQUÍ]
-```
+**Request:** `DELETE http://localhost:3000/api/departamentos/22`
 
 ---
 
-### Prueba 5 — Consulta 1: Estadísticas por Centro
+### 📸 Captura 10 — Postman: DELETE /api/departamentos/:id (200 OK)
+
+![DELETE Departamento en Postman](./Document/img/delete_depa_id.png)
+
+---
+
+### Prueba 6 — Consulta 1: Estadísticas por Centro
 
 **Request:** `GET http://localhost:3000/api/estadisticas/por-centro`
 
@@ -373,15 +366,25 @@ Debe mostrar el nuevo registro creado con su id generado
 
 ### 📸 Captura 11 — Postman: GET /api/estadisticas/por-centro
 
-```
-[INSERTAR CAPTURA DE LA CONSULTA ESTADÍSTICA 1 AQUÍ]
-Debe mostrar: CENTRO, ESCUELA, TOTAL_EXAMENES, PROMEDIO_TEORICO_PCT,
-PROMEDIO_PRACTICO, APROBADOS
+![Estadísticas por Centro](./Document/img/consulta1.png)
+
+**Respuesta esperada:** 
+```json
+[
+  {
+    "CENTRO": "Centro de Evaluación Zona 12",
+    "ESCUELA": "Escuela de Manejo AutoMaster",
+    "TOTAL_EXAMENES": 2,
+    "PROMEDIO_TEORICO_PCT": 75.5,
+    "PROMEDIO_PRACTICO": 82.0,
+    "APROBADOS": 2
+  }
+]
 ```
 
 ---
 
-### Prueba 6 — Consulta 2: Ranking de Evaluados
+### Prueba 7 — Consulta 2: Ranking de Evaluados
 
 **Request:** `GET http://localhost:3000/api/estadisticas/ranking`
 
@@ -389,15 +392,25 @@ PROMEDIO_PRACTICO, APROBADOS
 
 ### 📸 Captura 12 — Postman: GET /api/estadisticas/ranking
 
-```
-[INSERTAR CAPTURA DEL RANKING DE EVALUADOS AQUÍ]
-Debe mostrar: RANKING, NOMBRE_COMPLETO, PUNTAJE_TEORICO,
-PUNTAJE_PRACTICO, PUNTAJE_TOTAL, RESULTADO
+![Ranking de Evaluados](./Document/img/consulta2.png)
+
+**Respuesta esperada:**
+```json
+[
+  {
+    "RANKING": 1,
+    "NOMBRE_COMPLETO": "Juan Pérez García",
+    "PUNTAJE_TEORICO": 85,
+    "PUNTAJE_PRACTICO": 90,
+    "PUNTAJE_TOTAL": 175,
+    "RESULTADO": "APROBADO"
+  }
+]
 ```
 
 ---
 
-### Prueba 7 — Consulta 3: Pregunta con Menor Aciertos
+### Prueba 8 — Consulta 3: Pregunta con Menor Aciertos
 
 **Request:** `GET http://localhost:3000/api/estadisticas/pregunta-menor-aciertos`
 
@@ -405,10 +418,18 @@ PUNTAJE_PRACTICO, PUNTAJE_TOTAL, RESULTADO
 
 ### 📸 Captura 13 — Postman: GET /api/estadisticas/pregunta-menor-aciertos
 
-```
-[INSERTAR CAPTURA DE LA PREGUNTA CON MENOR PORCENTAJE DE ACIERTOS AQUÍ]
-Debe mostrar: ID_PREGUNTA, PREGUNTA_TEXTO, TOTAL_RESPUESTAS,
-ACIERTOS, PORCENTAJE_ACIERTOS, RESPUESTA_CORRECTA
+![Pregunta Menor Aciertos](./Document/img/consulta3.png)
+
+**Respuesta esperada:**
+```json
+{
+  "ID_PREGUNTA": 2,
+  "PREGUNTA_TEXTO": "¿Qué significa una luz roja en un semáforo?",
+  "TOTAL_RESPUESTAS": 3,
+  "ACIERTOS": 1,
+  "PORCENTAJE_ACIERTOS": 33.33,
+  "RESPUESTA_CORRECTA": "B"
+}
 ```
 
 ---
