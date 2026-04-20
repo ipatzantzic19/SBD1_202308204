@@ -1,22 +1,17 @@
 [
-    [
-        1,
-        "Guatemala Actualizado",
-        "01"
-    ],
-    [
-        2,
-        "Sacatep��quez",
-        "03"
-    ],
-    [
-        3,
-        "Escuintla",
-        "05"
-    ],
-    [
-        22,
-        "Quetzaltenango",
-        "09"
-    ]
+    {
+        "id_departamento":1,
+        "nombre":"Guatemala",
+        "codigo":"01"
+    },
+    {
+        "id_departamento":2,
+        "nombre":"Sacatepquez",
+        "codigo":"03"
+    },
+    {
+        "id_departamento":3,
+        "nombre":"Escuintla",
+        "codigo":"05"
+    }
 ]

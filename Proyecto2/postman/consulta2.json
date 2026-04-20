@@ -1,42 +1,42 @@
 [
-    [
-        1,
-        "Juan Carlos L��pez Garc��a",
-        50,
-        31,
-        81,
-        "APROBADO"
-    ],
-    [
-        2,
-        "Mar��a Elena Rodr��guez Morales",
-        0,
-        50,
-        50,
-        "REPROBADO"
-    ],
-    [
-        3,
-        "Carlos Alberto M��ndez Castillo",
-        0,
-        15,
-        15,
-        "REPROBADO"
-    ],
-    [
-        4,
-        "Ana Sof��a Guerrero D��az",
-        0,
-        0,
-        0,
-        "REPROBADO"
-    ],
-    [
-        4,
-        "Pedro Jos�� Hern��ndez Ruiz",
-        0,
-        0,
-        0,
-        "REPROBADO"
-    ]
+  {
+    "ranking": 1,
+    "nombre_completo": "María Elena Rodríguez Morales",
+    "puntaje_teorico": 100,
+    "puntaje_practico": 50,
+    "puntaje_total": 150,
+    "resultado": "APROBADO"
+  },
+  {
+    "ranking": 2,
+    "nombre_completo": "Juan Carlos López García",
+    "puntaje_teorico": 100,
+    "puntaje_practico": 31,
+    "puntaje_total": 131,
+    "resultado": "APROBADO"
+  },
+  {
+    "ranking": 3,
+    "nombre_completo": "Carlos Alberto Méndez Castillo",
+    "puntaje_teorico": 50,
+    "puntaje_practico": 15,
+    "puntaje_total": 65,
+    "resultado": "APROBADO"
+  },
+  {
+    "ranking": 4,
+    "nombre_completo": "Ana Sofía Guerrero Díaz",
+    "puntaje_teorico": 0,
+    "puntaje_practico": 0,
+    "puntaje_total": 0,
+    "resultado": "REPROBADO"
+  },
+  {
+    "ranking": 4,
+    "nombre_completo": "Pedro José Hernández Ruiz",
+    "puntaje_teorico": 0,
+    "puntaje_practico": 0,
+    "puntaje_total": 0,
+    "resultado": "REPROBADO"
+  }
 ]

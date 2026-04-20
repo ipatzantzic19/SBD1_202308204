@@ -8,7 +8,7 @@ router.get('/', async (_req, res) => {
   let conn;
   try {
     conn = await getConnection();
-    const r = await conn.execute('SELECT * FROM MUNICIPIO ORDER BY id_municipio');
+    const r = await conn.execute('SELECT * FROM EVALUACION.MUNICIPIO ORDER BY id_municipio');
     res.json(r.rows);
   } catch (err) { res.status(500).json({ error: err.message }); }
   finally { if (conn) await conn.close(); }
@@ -19,11 +19,17 @@ router.get('/:id', async (req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute(
-      'SELECT * FROM MUNICIPIO WHERE id_municipio = :id',
+      'SELECT * FROM EVALUACION.MUNICIPIO WHERE id_municipio = :id',
       { id: parseInt(req.params.id) }
     );
     if (!r.rows.length) return res.status(404).json({ error: 'No encontrado' });
-    res.json(r.rows[0]);
+    const row = r.rows[0];
+    res.json({
+      id_municipio: row[0],
+      nombre: row[1],
+      codigo: row[2],
+      departamento_id_departamento: row[3]
+    });
   } catch (err) { res.status(500).json({ error: err.message }); }
   finally { if (conn) await conn.close(); }
 });
@@ -36,7 +42,7 @@ router.post('/', async (req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute(
-      `INSERT INTO MUNICIPIO (nombre, codigo, departamento_id_departamento)
+      `INSERT INTO EVALUACION.MUNICIPIO (nombre, codigo, departamento_id_departamento)
        VALUES (:nombre, :codigo, :dep_id) RETURNING id_municipio INTO :id`,
       { nombre, codigo, dep_id: departamento_id_departamento,
         id: { dir: oracledb.BIND_OUT, type: oracledb.NUMBER } },
@@ -53,7 +59,7 @@ router.put('/:id', async (req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute(
-      `UPDATE MUNICIPIO SET nombre = :nombre, codigo = :codigo,
+      `UPDATE EVALUACION.MUNICIPIO SET nombre = :nombre, codigo = :codigo,
        departamento_id_departamento = :dep_id WHERE id_municipio = :id`,
       { nombre, codigo, dep_id: departamento_id_departamento, id: parseInt(req.params.id) },
       { autoCommit: true }
@@ -69,7 +75,7 @@ router.delete('/:id', async (req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute(
-      'DELETE FROM MUNICIPIO WHERE id_municipio = :id',
+      'DELETE FROM EVALUACION.MUNICIPIO WHERE id_municipio = :id',
       { id: parseInt(req.params.id) }, { autoCommit: true }
     );
     if (!r.rowsAffected) return res.status(404).json({ error: 'No encontrado' });

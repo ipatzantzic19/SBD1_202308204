@@ -1,8 +1,8 @@
-[
-    1,
-    "��Cu��l es la velocidad m��xima en zona urbana?",
-    "C",
-    2,
-    0,
-    0
-]
+{
+  "id_pregunta": 2,
+  "pregunta_texto": "¿Qué significa una señal de alto?",
+  "respuesta_correcta": "B",
+  "total_respuestas": 2,
+  "aciertos": 1,
+  "porcentaje_aciertos": 50
+}

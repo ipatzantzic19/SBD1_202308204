@@ -8,8 +8,17 @@ router.get('/', async (_req, res) => {
   let conn;
   try {
     conn = await getConnection();
-    const r = await conn.execute('SELECT * FROM PREGUNTAS ORDER BY id_pregunta');
-    res.json(r.rows);
+    const r = await conn.execute('SELECT * FROM EVALUACION.PREGUNTAS ORDER BY id_pregunta');
+    const resultado = r.rows.map(row => ({
+      id_pregunta: row[0],
+      pregunta_texto: row[1],
+      respuesta_a: row[2],
+      respuesta_b: row[3],
+      respuesta_c: row[4],
+      respuesta_d: row[5],
+      respuesta_correcta: row[6]
+    }));
+    res.json(resultado);
   } catch (err) { res.status(500).json({ error: err.message }); }
   finally { if (conn) await conn.close(); }
 });
@@ -18,9 +27,18 @@ router.get('/:id', async (req, res) => {
   let conn;
   try {
     conn = await getConnection();
-    const r = await conn.execute('SELECT * FROM PREGUNTAS WHERE id_pregunta = :id', { id: parseInt(req.params.id) });
+    const r = await conn.execute('SELECT * FROM EVALUACION.PREGUNTAS WHERE id_pregunta = :id', { id: parseInt(req.params.id) });
     if (!r.rows.length) return res.status(404).json({ error: 'No encontrado' });
-    res.json(r.rows[0]);
+    const row = r.rows[0];
+    res.json({
+      id_pregunta: row[0],
+      pregunta_texto: row[1],
+      respuesta_a: row[2],
+      respuesta_b: row[3],
+      respuesta_c: row[4],
+      respuesta_d: row[5],
+      respuesta_correcta: row[6]
+    });
   } catch (err) { res.status(500).json({ error: err.message }); }
   finally { if (conn) await conn.close(); }
 });
@@ -32,7 +50,7 @@ router.post('/', async (req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute(
-      `INSERT INTO PREGUNTAS (pregunta_texto, respuesta_a, respuesta_b, respuesta_c, respuesta_d, respuesta_correcta)
+      `INSERT INTO EVALUACION.PREGUNTAS (pregunta_texto, respuesta_a, respuesta_b, respuesta_c, respuesta_d, respuesta_correcta)
        VALUES (:texto, :a, :b, :c, :d, :correcta) RETURNING id_pregunta INTO :id`,
       { texto: pregunta_texto, a: respuesta_a, b: respuesta_b, c: respuesta_c, d: respuesta_d,
         correcta: respuesta_correcta, id: { dir: oracledb.BIND_OUT, type: oracledb.NUMBER } },
@@ -49,7 +67,7 @@ router.put('/:id', async (req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute(
-      `UPDATE PREGUNTAS SET pregunta_texto = :texto, respuesta_a = :a, respuesta_b = :b,
+      `UPDATE EVALUACION.PREGUNTAS SET pregunta_texto = :texto, respuesta_a = :a, respuesta_b = :b,
         respuesta_c = :c, respuesta_d = :d, respuesta_correcta = :correcta WHERE id_pregunta = :id`,
       { texto: pregunta_texto, a: respuesta_a, b: respuesta_b, c: respuesta_c, d: respuesta_d,
         correcta: respuesta_correcta, id: parseInt(req.params.id) }, { autoCommit: true }
@@ -64,7 +82,7 @@ router.delete('/:id', async (req, res) => {
   let conn;
   try {
     conn = await getConnection();
-    const r = await conn.execute('DELETE FROM PREGUNTAS WHERE id_pregunta = :id', { id: parseInt(req.params.id) }, { autoCommit: true });
+    const r = await conn.execute('DELETE FROM EVALUACION.PREGUNTAS WHERE id_pregunta = :id', { id: parseInt(req.params.id) }, { autoCommit: true });
     if (!r.rowsAffected) return res.status(404).json({ error: 'No encontrado' });
     res.json({ message: 'Eliminado correctamente' });
   } catch (err) { res.status(500).json({ error: err.message }); }

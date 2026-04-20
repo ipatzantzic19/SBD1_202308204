@@ -8,8 +8,13 @@ router.get('/', async (_req, res) => {
   let conn;
   try {
     conn = await getConnection();
-    const r = await conn.execute('SELECT * FROM CORRELATIVO ORDER BY id_correlativo');
-    res.json(r.rows);
+    const r = await conn.execute('SELECT * FROM EVALUACION.CORRELATIVO ORDER BY id_correlativo');
+    const resultado = r.rows.map(row => ({
+      id_correlativo: row[0],
+      fecha: row[1],
+      no_examen: row[2]
+    }));
+    res.json(resultado);
   } catch (err) { res.status(500).json({ error: err.message }); }
   finally { if (conn) await conn.close(); }
 });
@@ -18,9 +23,14 @@ router.get('/:id', async (req, res) => {
   let conn;
   try {
     conn = await getConnection();
-    const r = await conn.execute('SELECT * FROM CORRELATIVO WHERE id_correlativo = :id', { id: parseInt(req.params.id) });
+    const r = await conn.execute('SELECT * FROM EVALUACION.CORRELATIVO WHERE id_correlativo = :id', { id: parseInt(req.params.id) });
     if (!r.rows.length) return res.status(404).json({ error: 'No encontrado' });
-    res.json(r.rows[0]);
+    const row = r.rows[0];
+    res.json({
+      id_correlativo: row[0],
+      fecha: row[1],
+      no_examen: row[2]
+    });
   } catch (err) { res.status(500).json({ error: err.message }); }
   finally { if (conn) await conn.close(); }
 });
@@ -32,7 +42,7 @@ router.post('/', async (req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute(
-      `INSERT INTO CORRELATIVO (fecha, no_examen) VALUES (TO_DATE(:fecha,'YYYY-MM-DD'), :no_examen)
+      `INSERT INTO EVALUACION.CORRELATIVO (fecha, no_examen) VALUES (TO_DATE(:fecha,'YYYY-MM-DD'), :no_examen)
        RETURNING id_correlativo INTO :id`,
       { fecha, no_examen, id: { dir: oracledb.BIND_OUT, type: oracledb.NUMBER } },
       { autoCommit: true }
@@ -48,7 +58,7 @@ router.put('/:id', async (req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute(
-      `UPDATE CORRELATIVO SET fecha = TO_DATE(:fecha,'YYYY-MM-DD'), no_examen = :no_examen
+      `UPDATE EVALUACION.CORRELATIVO SET fecha = TO_DATE(:fecha,'YYYY-MM-DD'), no_examen = :no_examen
        WHERE id_correlativo = :id`,
       { fecha, no_examen, id: parseInt(req.params.id) }, { autoCommit: true }
     );
@@ -62,7 +72,7 @@ router.delete('/:id', async (req, res) => {
   let conn;
   try {
     conn = await getConnection();
-    const r = await conn.execute('DELETE FROM CORRELATIVO WHERE id_correlativo = :id', { id: parseInt(req.params.id) }, { autoCommit: true });
+    const r = await conn.execute('DELETE FROM EVALUACION.CORRELATIVO WHERE id_correlativo = :id', { id: parseInt(req.params.id) }, { autoCommit: true });
     if (!r.rowsAffected) return res.status(404).json({ error: 'No encontrado' });
     res.json({ message: 'Eliminado correctamente' });
   } catch (err) { res.status(500).json({ error: err.message }); }

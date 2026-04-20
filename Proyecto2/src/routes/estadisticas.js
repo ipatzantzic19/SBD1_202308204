@@ -19,9 +19,9 @@ router.get('/por-centro', async (_req, res) => {
         ROUND(AVG(teorico.pct), 2)                  AS PROMEDIO_TEORICO_PCT,
         ROUND(AVG(practico.suma_nota), 2)           AS PROMEDIO_PRACTICO,
         SUM(CASE WHEN (NVL(teorico.pct,0) + NVL(practico.suma_nota,0)) >= 60 THEN 1 ELSE 0 END) AS APROBADOS
-      FROM EXAMEN ex
-      JOIN CENTRO  c ON ex.registro_id_centro  = c.id_centro
-      JOIN ESCUELA e ON ex.registro_id_escuela = e.id_escuela
+      FROM EVALUACION.EXAMEN ex
+      JOIN EVALUACION.CENTRO  c ON ex.registro_id_centro  = c.id_centro
+      JOIN EVALUACION.ESCUELA e ON ex.registro_id_escuela = e.id_escuela
       LEFT JOIN (
         SELECT
           ru.examen_id_examen,
@@ -29,19 +29,30 @@ router.get('/por-centro', async (_req, res) => {
             SUM(CASE WHEN ru.respuesta = p.respuesta_correcta THEN 1 ELSE 0 END) * 100.0
             / NULLIF(COUNT(*), 0), 2
           ) AS pct
-        FROM RESPUESTA_USUARIO ru
-        JOIN PREGUNTAS p ON p.id_pregunta = ru.pregunta_id_pregunta
+        FROM EVALUACION.RESPUESTA_USUARIO ru
+        JOIN EVALUACION.PREGUNTAS p ON p.id_pregunta = ru.pregunta_id_pregunta
         GROUP BY ru.examen_id_examen
       ) teorico ON teorico.examen_id_examen = ex.id_examen
       LEFT JOIN (
         SELECT examen_id_examen, SUM(nota) AS suma_nota
-        FROM RESPUESTA_PRACTICO_USUARIO
+        FROM EVALUACION.RESPUESTA_PRACTICO_USUARIO
         GROUP BY examen_id_examen
       ) practico ON practico.examen_id_examen = ex.id_examen
       GROUP BY c.nombre, e.nombre
       ORDER BY c.nombre, e.nombre
     `);
-    res.json(r.rows);
+    
+    // Transformar a objetos con nombres de campo
+    const resultado = r.rows.map(row => ({
+      centro: row[0],
+      escuela: row[1],
+      total_examenes: row[2],
+      promedio_teorico_pct: row[3],
+      promedio_practico: row[4],
+      aprobados: row[5]
+    }));
+    
+    res.json(resultado);
   } catch (err) { res.status(500).json({ error: err.message }); }
   finally { if (conn) await conn.close(); }
 });
@@ -72,21 +83,32 @@ router.get('/ranking', async (_req, res) => {
             SELECT ROUND(
               SUM(CASE WHEN ru.respuesta = p.respuesta_correcta THEN 1 ELSE 0 END) * 100.0
               / NULLIF(COUNT(*), 0), 2)
-            FROM RESPUESTA_USUARIO ru
-            JOIN PREGUNTAS p ON p.id_pregunta = ru.pregunta_id_pregunta
+            FROM EVALUACION.RESPUESTA_USUARIO ru
+            JOIN EVALUACION.PREGUNTAS p ON p.id_pregunta = ru.pregunta_id_pregunta
             WHERE ru.examen_id_examen = ex.id_examen
           ), 0) AS puntaje_teorico,
           NVL((
             SELECT SUM(nota)
-            FROM RESPUESTA_PRACTICO_USUARIO
+            FROM EVALUACION.RESPUESTA_PRACTICO_USUARIO
             WHERE examen_id_examen = ex.id_examen
           ), 0) AS puntaje_practico
-        FROM REGISTRO reg
-        JOIN EXAMEN ex ON ex.registro_id_registro = reg.id_registro
+        FROM EVALUACION.REGISTRO reg
+        JOIN EVALUACION.EXAMEN ex ON ex.registro_id_registro = reg.id_registro
       )
       ORDER BY RANKING
     `);
-    res.json(r.rows);
+    
+    // Transformar a objetos con nombres de campo
+    const resultado = r.rows.map(row => ({
+      ranking: row[0],
+      nombre_completo: row[1],
+      puntaje_teorico: row[2],
+      puntaje_practico: row[3],
+      puntaje_total: row[4],
+      resultado: row[5]
+    }));
+    
+    res.json(resultado);
   } catch (err) { res.status(500).json({ error: err.message }); }
   finally { if (conn) await conn.close(); }
 });
@@ -112,8 +134,8 @@ router.get('/pregunta-menor-aciertos', async (_req, res) => {
             SUM(CASE WHEN ru.respuesta = p.respuesta_correcta THEN 1 ELSE 0 END) * 100.0
             / COUNT(*), 2
           )                                                                    AS PORCENTAJE_ACIERTOS
-        FROM PREGUNTAS p
-        JOIN RESPUESTA_USUARIO ru ON ru.pregunta_id_pregunta = p.id_pregunta
+        FROM EVALUACION.PREGUNTAS p
+        JOIN EVALUACION.RESPUESTA_USUARIO ru ON ru.pregunta_id_pregunta = p.id_pregunta
         GROUP BY p.id_pregunta, p.pregunta_texto, p.respuesta_correcta
         ORDER BY PORCENTAJE_ACIERTOS ASC
       )
@@ -121,7 +143,19 @@ router.get('/pregunta-menor-aciertos', async (_req, res) => {
     `);
     if (!r.rows.length)
       return res.json({ message: 'No hay respuestas registradas aún' });
-    res.json(r.rows[0]);
+    
+    // Transformar a objeto con nombres de campo
+    const row = r.rows[0];
+    const resultado = {
+      id_pregunta: row[0],
+      pregunta_texto: row[1],
+      respuesta_correcta: row[2],
+      total_respuestas: row[3],
+      aciertos: row[4],
+      porcentaje_aciertos: row[5]
+    };
+    
+    res.json(resultado);
   } catch (err) { res.status(500).json({ error: err.message }); }
   finally { if (conn) await conn.close(); }
 });

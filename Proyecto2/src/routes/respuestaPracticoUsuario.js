@@ -10,11 +10,19 @@ router.get('/', async (_req, res) => {
     conn = await getConnection();
     const r = await conn.execute(`
       SELECT rpu.*, pp.pregunta_texto, pp.punteo AS punteo_maximo
-      FROM RESPUESTA_PRACTICO_USUARIO rpu
-      JOIN PREGUNTAS_PRACTICO pp ON rpu.pregunta_practico_id_pregunta_practico = pp.id_pregunta_practico
+      FROM EVALUACION.RESPUESTA_PRACTICO_USUARIO rpu
+      JOIN EVALUACION.PREGUNTAS_PRACTICO pp ON rpu.pregunta_practico_id_pregunta_practico = pp.id_pregunta_practico
       ORDER BY rpu.id_respuesta_practico_usuario
     `);
-    res.json(r.rows);
+    const resultado = r.rows.map(row => ({
+      id_respuesta_practico_usuario: row[0],
+      pregunta_practico_id_pregunta_practico: row[1],
+      examen_id_examen: row[2],
+      nota: row[3],
+      pregunta_texto: row[4],
+      punteo_maximo: row[5]
+    }));
+    res.json(resultado);
   } catch (err) { res.status(500).json({ error: err.message }); }
   finally { if (conn) await conn.close(); }
 });
@@ -23,9 +31,15 @@ router.get('/:id', async (req, res) => {
   let conn;
   try {
     conn = await getConnection();
-    const r = await conn.execute('SELECT * FROM RESPUESTA_PRACTICO_USUARIO WHERE id_respuesta_practico_usuario = :id', { id: parseInt(req.params.id) });
+    const r = await conn.execute('SELECT * FROM EVALUACION.RESPUESTA_PRACTICO_USUARIO WHERE id_respuesta_practico_usuario = :id', { id: parseInt(req.params.id) });
     if (!r.rows.length) return res.status(404).json({ error: 'No encontrado' });
-    res.json(r.rows[0]);
+    const row = r.rows[0];
+    res.json({
+      id_respuesta_practico_usuario: row[0],
+      pregunta_practico_id_pregunta_practico: row[1],
+      examen_id_examen: row[2],
+      nota: row[3]
+    });
   } catch (err) { res.status(500).json({ error: err.message }); }
   finally { if (conn) await conn.close(); }
 });
@@ -38,7 +52,7 @@ router.post('/', async (req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute(
-      `INSERT INTO RESPUESTA_PRACTICO_USUARIO (pregunta_practico_id_pregunta_practico, examen_id_examen, nota)
+      `INSERT INTO EVALUACION.RESPUESTA_PRACTICO_USUARIO (pregunta_practico_id_pregunta_practico, examen_id_examen, nota)
        VALUES (:preg, :exam, :nota) RETURNING id_respuesta_practico_usuario INTO :id`,
       { preg: pregunta_practico_id_pregunta_practico, exam: examen_id_examen, nota,
         id: { dir: oracledb.BIND_OUT, type: oracledb.NUMBER } },
@@ -55,7 +69,7 @@ router.put('/:id', async (req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute(
-      'UPDATE RESPUESTA_PRACTICO_USUARIO SET nota = :nota WHERE id_respuesta_practico_usuario = :id',
+      'UPDATE EVALUACION.RESPUESTA_PRACTICO_USUARIO SET nota = :nota WHERE id_respuesta_practico_usuario = :id',
       { nota, id: parseInt(req.params.id) }, { autoCommit: true }
     );
     if (!r.rowsAffected) return res.status(404).json({ error: 'No encontrado' });
@@ -68,7 +82,7 @@ router.delete('/:id', async (req, res) => {
   let conn;
   try {
     conn = await getConnection();
-    const r = await conn.execute('DELETE FROM RESPUESTA_PRACTICO_USUARIO WHERE id_respuesta_practico_usuario = :id', { id: parseInt(req.params.id) }, { autoCommit: true });
+    const r = await conn.execute('DELETE FROM EVALUACION.RESPUESTA_PRACTICO_USUARIO WHERE id_respuesta_practico_usuario = :id', { id: parseInt(req.params.id) }, { autoCommit: true });
     if (!r.rowsAffected) return res.status(404).json({ error: 'No encontrado' });
     res.json({ message: 'Eliminado correctamente' });
   } catch (err) { res.status(500).json({ error: err.message }); }

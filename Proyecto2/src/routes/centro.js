@@ -9,8 +9,12 @@ router.get('/', async (_req, res) => {
   let conn;
   try {
     conn = await getConnection();
-    const r = await conn.execute('SELECT * FROM CENTRO ORDER BY id_centro');
-    res.json(r.rows);
+    const r = await conn.execute('SELECT * FROM EVALUACION.CENTRO ORDER BY id_centro');
+    const resultado = r.rows.map(row => ({
+      id_centro: row[0],
+      nombre: row[1]
+    }));
+    res.json(resultado);
   } catch (err) { res.status(500).json({ error: err.message }); }
   finally { if (conn) await conn.close(); }
 });
@@ -19,9 +23,13 @@ router.get('/:id', async (req, res) => {
   let conn;
   try {
     conn = await getConnection();
-    const r = await conn.execute('SELECT * FROM CENTRO WHERE id_centro = :id', { id: parseInt(req.params.id) });
+    const r = await conn.execute('SELECT * FROM EVALUACION.CENTRO WHERE id_centro = :id', { id: parseInt(req.params.id) });
     if (!r.rows.length) return res.status(404).json({ error: 'No encontrado' });
-    res.json(r.rows[0]);
+    const row = r.rows[0];
+    res.json({
+      id_centro: row[0],
+      nombre: row[1]
+    });
   } catch (err) { res.status(500).json({ error: err.message }); }
   finally { if (conn) await conn.close(); }
 });
@@ -33,7 +41,7 @@ router.post('/', async (req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute(
-      `INSERT INTO CENTRO (nombre) VALUES (:nombre) RETURNING id_centro INTO :id`,
+      `INSERT INTO EVALUACION.CENTRO (nombre) VALUES (:nombre) RETURNING id_centro INTO :id`,
       { nombre, id: { dir: oracledb.BIND_OUT, type: oracledb.NUMBER } },
       { autoCommit: true }
     );
@@ -48,7 +56,7 @@ router.put('/:id', async (req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute(
-      'UPDATE CENTRO SET nombre = :nombre WHERE id_centro = :id',
+      'UPDATE EVALUACION.CENTRO SET nombre = :nombre WHERE id_centro = :id',
       { nombre, id: parseInt(req.params.id) }, { autoCommit: true }
     );
     if (!r.rowsAffected) return res.status(404).json({ error: 'No encontrado' });
@@ -61,7 +69,7 @@ router.delete('/:id', async (req, res) => {
   let conn;
   try {
     conn = await getConnection();
-    const r = await conn.execute('DELETE FROM CENTRO WHERE id_centro = :id', { id: parseInt(req.params.id) }, { autoCommit: true });
+    const r = await conn.execute('DELETE FROM EVALUACION.CENTRO WHERE id_centro = :id', { id: parseInt(req.params.id) }, { autoCommit: true });
     if (!r.rowsAffected) return res.status(404).json({ error: 'No encontrado' });
     res.json({ message: 'Eliminado correctamente' });
   } catch (err) { res.status(500).json({ error: err.message }); }

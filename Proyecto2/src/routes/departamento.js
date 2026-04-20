@@ -13,9 +13,14 @@ router.get('/', async (_req, res) => {
     // Obtener conexión a la base de datos
     conn = await getConnection();
     // Ejecutar consulta para obtener todos los departamentos ordenados por id_departamento
-    const r = await conn.execute('SELECT * FROM DEPARTAMENTO ORDER BY id_departamento');
+    const r = await conn.execute('SELECT * FROM EVALUACION.DEPARTAMENTO ORDER BY id_departamento');
     // Devolver resultados como JSON
-    res.json(r.rows);
+    const resultado = r.rows.map(row => ({
+      id_departamento: row[0],
+      nombre: row[1],
+      codigo: row[2]
+    }));
+    res.json(resultado);
   } catch (err) { res.status(500).json({ error: err.message }); }
   // Asegurar que la conexión se cierre después de la operación
   finally { if (conn) await conn.close(); }
@@ -27,13 +32,18 @@ router.get('/:id', async (req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute( 
-      'SELECT * FROM DEPARTAMENTO WHERE id_departamento = :id',
+      'SELECT * FROM EVALUACION.DEPARTAMENTO WHERE id_departamento = :id',
       { id: parseInt(req.params.id) } 
     );
     // Si no se encuentra el departamento, devolver error 404
     if (!r.rows.length) return res.status(404).json({ error: 'No encontrado' });
     // Devolver el departamento encontrado como JSON
-    res.json(r.rows[0]);
+    const row = r.rows[0];
+    res.json({
+      id_departamento: row[0],
+      nombre: row[1],
+      codigo: row[2]
+    });
   } catch (err) { res.status(500).json({ error: err.message }); }
   finally { if (conn) await conn.close(); }
 });
@@ -47,7 +57,7 @@ router.post('/', async (req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute(
-      `INSERT INTO DEPARTAMENTO (nombre, codigo) VALUES (:nombre, :codigo)
+      `INSERT INTO EVALUACION.DEPARTAMENTO (nombre, codigo) VALUES (:nombre, :codigo)
        RETURNING id_departamento INTO :id`,
        // Usar oracledb.BIND_OUT para obtener el id generado automáticamente después de la inserción
       { nombre, codigo, id: { dir: oracledb.BIND_OUT, type: oracledb.NUMBER } },
@@ -67,7 +77,7 @@ router.put('/:id', async (req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute(
-      'UPDATE DEPARTAMENTO SET nombre = :nombre, codigo = :codigo WHERE id_departamento = :id',
+      'UPDATE EVALUACION.DEPARTAMENTO SET nombre = :nombre, codigo = :codigo WHERE id_departamento = :id',
       { nombre, codigo, id: parseInt(req.params.id) },
       { autoCommit: true }
     );
@@ -84,7 +94,7 @@ router.delete('/:id', async (req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute(
-      'DELETE FROM DEPARTAMENTO WHERE id_departamento = :id',
+      'DELETE FROM EVALUACION.DEPARTAMENTO WHERE id_departamento = :id',
       { id: parseInt(req.params.id) },
       { autoCommit: true }
     );

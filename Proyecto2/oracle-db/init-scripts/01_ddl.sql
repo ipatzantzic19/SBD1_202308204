@@ -1,10 +1,11 @@
-sleep 180 && echo "SELECT owner, COUNT(*) FROM dba_tables WHERE table_name IN ('DEPARTAMENTO') GROUP BY owner;" | docker exec -i oracle-xe-evaluacion sqlplus -s / as sysdbasleep 180 && echo "SELECT owner, COUNT(*) FROM dba_tables WHERE table_name IN ('DEPARTAMENTO') GROUP BY owner;" | docker exec -i oracle-xe-evaluacion sqlplus -s / as sysdba-- ============================================================
+-- ============================================================
 -- 01_ddl.sql  —  Esquema DDL completo
 -- Sistema: Centros de Evaluación de Manejo — Guatemala
 -- Proyecto 2 · SBD1 · USAC 1S 2026
 -- ============================================================
 
--- Crear tablas explícitamente en el schema c##EVAL
+-- Crear tablas en el PDB XEPDB1
+ALTER SESSION SET CONTAINER = XEPDB1;
 
 -- ── DEPARTAMENTO ─────────────────────────────────────────────
 CREATE TABLE EVALUACION.DEPARTAMENTO (

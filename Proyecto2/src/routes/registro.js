@@ -8,8 +8,20 @@ router.get('/', async (_req, res) => {
   let conn;
   try {
     conn = await getConnection();
-    const r = await conn.execute('SELECT * FROM REGISTRO ORDER BY id_registro');
-    res.json(r.rows);
+    const r = await conn.execute('SELECT * FROM EVALUACION.REGISTRO ORDER BY id_registro');
+    const resultado = r.rows.map(row => ({
+      id_registro: row[0],
+      ubicacion_escuela_id_escuela: row[1],
+      ubicacion_centro_id_centro: row[2],
+      municipio_id_municipio: row[3],
+      municipio_departamento_id_departamento: row[4],
+      fecha: row[5],
+      tipo_tramite: row[6],
+      tipo_licencia: row[7],
+      nombre_completo: row[8],
+      genero: row[9]
+    }));
+    res.json(resultado);
   } catch (err) { res.status(500).json({ error: err.message }); }
   finally { if (conn) await conn.close(); }
 });
@@ -18,9 +30,21 @@ router.get('/:id', async (req, res) => {
   let conn;
   try {
     conn = await getConnection();
-    const r = await conn.execute('SELECT * FROM REGISTRO WHERE id_registro = :id', { id: parseInt(req.params.id) });
+    const r = await conn.execute('SELECT * FROM EVALUACION.REGISTRO WHERE id_registro = :id', { id: parseInt(req.params.id) });
     if (!r.rows.length) return res.status(404).json({ error: 'No encontrado' });
-    res.json(r.rows[0]);
+    const row = r.rows[0];
+    res.json({
+      id_registro: row[0],
+      ubicacion_escuela_id_escuela: row[1],
+      ubicacion_centro_id_centro: row[2],
+      municipio_id_municipio: row[3],
+      municipio_departamento_id_departamento: row[4],
+      fecha: row[5],
+      tipo_tramite: row[6],
+      tipo_licencia: row[7],
+      nombre_completo: row[8],
+      genero: row[9]
+    });
   } catch (err) { res.status(500).json({ error: err.message }); }
   finally { if (conn) await conn.close(); }
 });
@@ -35,7 +59,7 @@ router.post('/', async (req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute(
-      `INSERT INTO REGISTRO (ubicacion_escuela_id_escuela, ubicacion_centro_id_centro,
+      `INSERT INTO EVALUACION.REGISTRO (ubicacion_escuela_id_escuela, ubicacion_centro_id_centro,
         municipio_id_municipio, municipio_departamento_id_departamento,
         fecha, tipo_tramite, tipo_licencia, nombre_completo, genero)
        VALUES (:esc, :cen, :mun, :dep, TO_DATE(:fecha,'YYYY-MM-DD'), :tramite, :licencia, :nombre, :genero)
@@ -60,7 +84,7 @@ router.put('/:id', async (req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute(
-      `UPDATE REGISTRO SET nombre_completo = :nombre, tipo_licencia = :licencia, genero = :genero
+      `UPDATE EVALUACION.REGISTRO SET nombre_completo = :nombre, tipo_licencia = :licencia, genero = :genero
        WHERE id_registro = :id`,
       { nombre: nombre_completo, licencia: tipo_licencia, genero, id: parseInt(req.params.id) },
       { autoCommit: true }
@@ -75,7 +99,7 @@ router.delete('/:id', async (req, res) => {
   let conn;
   try {
     conn = await getConnection();
-    const r = await conn.execute('DELETE FROM REGISTRO WHERE id_registro = :id', { id: parseInt(req.params.id) }, { autoCommit: true });
+    const r = await conn.execute('DELETE FROM EVALUACION.REGISTRO WHERE id_registro = :id', { id: parseInt(req.params.id) }, { autoCommit: true });
     if (!r.rowsAffected) return res.status(404).json({ error: 'No encontrado' });
     res.json({ message: 'Eliminado correctamente' });
   } catch (err) { res.status(500).json({ error: err.message }); }
