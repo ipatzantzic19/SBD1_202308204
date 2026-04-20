@@ -80,9 +80,9 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{base_url}}/api/departamentos/22",
+              "raw": "{{base_url}}/api/departamentos/1",
               "host": ["{{base_url}}"],
-              "path": ["api", "departamentos", "22"]
+              "path": ["api", "departamentos", "1"]
             }
           }
         }
@@ -163,9 +163,9 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{base_url}}/api/municipios/5",
+              "raw": "{{base_url}}/api/municipios/1",
               "host": ["{{base_url}}"],
-              "path": ["api", "municipios", "5"]
+              "path": ["api", "municipios", "1"]
             }
           }
         }
@@ -183,6 +183,18 @@
               "raw": "{{base_url}}/api/centros",
               "host": ["{{base_url}}"],
               "path": ["api", "centros"]
+            }
+          }
+        },
+        {
+          "name": "GET - Por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/centros/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "centros", "1"]
             }
           }
         },
@@ -206,6 +218,39 @@
               "path": ["api", "centros"]
             }
           }
+        },
+        {
+          "name": "PUT - Actualizar",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Centro Actualizado\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/centros/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "centros", "1"]
+            }
+          }
+        },
+        {
+          "name": "DELETE - Eliminar",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/centros/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "centros", "1"]
+            }
+          }
         }
       ]
     },
@@ -221,6 +266,18 @@
               "raw": "{{base_url}}/api/escuelas",
               "host": ["{{base_url}}"],
               "path": ["api", "escuelas"]
+            }
+          }
+        },
+        {
+          "name": "GET - Por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/escuelas/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "escuelas", "1"]
             }
           }
         },
@@ -244,6 +301,39 @@
               "path": ["api", "escuelas"]
             }
           }
+        },
+        {
+          "name": "PUT - Actualizar",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Escuela Actualizada\",\n  \"direccion\": \"Nueva dirección\",\n  \"acuerdo\": \"ESC-ACT-001\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/escuelas/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "escuelas", "1"]
+            }
+          }
+        },
+        {
+          "name": "DELETE - Eliminar",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/escuelas/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "escuelas", "1"]
+            }
+          }
         }
       ]
     },
@@ -259,6 +349,18 @@
               "raw": "{{base_url}}/api/ubicaciones",
               "host": ["{{base_url}}"],
               "path": ["api", "ubicaciones"]
+            }
+          }
+        },
+        {
+          "name": "GET - Por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/ubicaciones/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "ubicaciones", "1"]
             }
           }
         },
@@ -282,6 +384,39 @@
               "path": ["api", "ubicaciones"]
             }
           }
+        },
+        {
+          "name": "PUT - Actualizar",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"escuela_id_escuela\": 2,\n  \"centro_id_centro\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/ubicaciones/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "ubicaciones", "1"]
+            }
+          }
+        },
+        {
+          "name": "DELETE - Eliminar",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/ubicaciones/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "ubicaciones", "1"]
+            }
+          }
         }
       ]
     },
@@ -297,6 +432,18 @@
               "raw": "{{base_url}}/api/registros",
               "host": ["{{base_url}}"],
               "path": ["api", "registros"]
+            }
+          }
+        },
+        {
+          "name": "GET - Por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/registros/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "registros", "1"]
             }
           }
         },
@@ -320,6 +467,39 @@
               "path": ["api", "registros"]
             }
           }
+        },
+        {
+          "name": "PUT - Actualizar",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Carlos\",\n  \"apellido\": \"García\",\n  \"fecha_nacimiento\": \"1990-05-15\",\n  \"numero_licencia\": \"LIC-2024-001-A\",\n  \"municipio_id_municipio\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/registros/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "registros", "1"]
+            }
+          }
+        },
+        {
+          "name": "DELETE - Eliminar",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/registros/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "registros", "1"]
+            }
+          }
         }
       ]
     },
@@ -337,6 +517,72 @@
               "path": ["api", "correlativos"]
             }
           }
+        },
+        {
+          "name": "GET - Por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/correlativos/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "correlativos", "1"]
+            }
+          }
+        },
+        {
+          "name": "POST - Crear",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"numero\": \"CORR-2026-001\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/correlativos",
+              "host": ["{{base_url}}"],
+              "path": ["api", "correlativos"]
+            }
+          }
+        },
+        {
+          "name": "PUT - Actualizar",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"numero\": \"CORR-2026-001-A\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/correlativos/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "correlativos", "1"]
+            }
+          }
+        },
+        {
+          "name": "DELETE - Eliminar",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/correlativos/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "correlativos", "1"]
+            }
+          }
         }
       ]
     },
@@ -352,6 +598,18 @@
               "raw": "{{base_url}}/api/examenes",
               "host": ["{{base_url}}"],
               "path": ["api", "examenes"]
+            }
+          }
+        },
+        {
+          "name": "GET - Por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/examenes/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "examenes", "1"]
             }
           }
         },
@@ -375,6 +633,39 @@
               "path": ["api", "examenes"]
             }
           }
+        },
+        {
+          "name": "PUT - Actualizar",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"puntaje_teorico\": 88,\n  \"puntaje_practico\": 92,\n  \"resultado\": \"APROBADO\",\n  \"registro_id_registro\": 1,\n  \"correlativo_id_correlativo\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/examenes/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "examenes", "1"]
+            }
+          }
+        },
+        {
+          "name": "DELETE - Eliminar",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/examenes/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "examenes", "1"]
+            }
+          }
         }
       ]
     },
@@ -390,6 +681,72 @@
               "raw": "{{base_url}}/api/preguntas",
               "host": ["{{base_url}}"],
               "path": ["api", "preguntas"]
+            }
+          }
+        },
+        {
+          "name": "GET - Por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/preguntas/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas", "1"]
+            }
+          }
+        },
+        {
+          "name": "POST - Crear",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"texto\": \"¿Qué significa una luz roja en semáforo?\",\n  \"respuesta_correcta\": \"Detenerse\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/preguntas",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas"]
+            }
+          }
+        },
+        {
+          "name": "PUT - Actualizar",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"texto\": \"¿Qué significa una luz amarilla en semáforo?\",\n  \"respuesta_correcta\": \"Precaución\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/preguntas/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas", "1"]
+            }
+          }
+        },
+        {
+          "name": "DELETE - Eliminar",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/preguntas/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas", "1"]
             }
           }
         }
@@ -409,6 +766,72 @@
               "path": ["api", "preguntas-practico"]
             }
           }
+        },
+        {
+          "name": "GET - Por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/preguntas-practico/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas-practico", "1"]
+            }
+          }
+        },
+        {
+          "name": "POST - Crear",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"descripcion\": \"Revisión de retrovisores\",\n  \"criterio_evaluacion\": \"Correcto\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/preguntas-practico",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas-practico"]
+            }
+          }
+        },
+        {
+          "name": "PUT - Actualizar",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"descripcion\": \"Revisión de espejos y cinturón\",\n  \"criterio_evaluacion\": \"Correcto\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/preguntas-practico/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas-practico", "1"]
+            }
+          }
+        },
+        {
+          "name": "DELETE - Eliminar",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/preguntas-practico/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "preguntas-practico", "1"]
+            }
+          }
         }
       ]
     },
@@ -426,6 +849,72 @@
               "path": ["api", "respuestas-usuario"]
             }
           }
+        },
+        {
+          "name": "GET - Por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-usuario/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-usuario", "1"]
+            }
+          }
+        },
+        {
+          "name": "POST - Crear",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"respuesta\": \"A\",\n  \"es_correcta\": true,\n  \"pregunta_id_pregunta\": 1,\n  \"registro_id_registro\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-usuario",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-usuario"]
+            }
+          }
+        },
+        {
+          "name": "PUT - Actualizar",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"respuesta\": \"B\",\n  \"es_correcta\": false,\n  \"pregunta_id_pregunta\": 1,\n  \"registro_id_registro\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-usuario/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-usuario", "1"]
+            }
+          }
+        },
+        {
+          "name": "DELETE - Eliminar",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-usuario/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-usuario", "1"]
+            }
+          }
         }
       ]
     },
@@ -441,6 +930,72 @@
               "raw": "{{base_url}}/api/respuestas-practico",
               "host": ["{{base_url}}"],
               "path": ["api", "respuestas-practico"]
+            }
+          }
+        },
+        {
+          "name": "GET - Por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-practico/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-practico", "1"]
+            }
+          }
+        },
+        {
+          "name": "POST - Crear",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"puntaje_obtenido\": 8,\n  \"observaciones\": \"Buen desempeño\",\n  \"pregunta_practico_id_pregunta_practico\": 1,\n  \"examen_id_examen\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-practico",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-practico"]
+            }
+          }
+        },
+        {
+          "name": "PUT - Actualizar",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"puntaje_obtenido\": 9,\n  \"observaciones\": \"Excelente desempeño\",\n  \"pregunta_practico_id_pregunta_practico\": 1,\n  \"examen_id_examen\": 1\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-practico/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-practico", "1"]
+            }
+          }
+        },
+        {
+          "name": "DELETE - Eliminar",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/respuestas-practico/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "respuestas-practico", "1"]
             }
           }
         }
