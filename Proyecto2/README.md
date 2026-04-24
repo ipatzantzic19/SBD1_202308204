@@ -3,8 +3,6 @@
 **Curso:** Sistemas de Bases de Datos 1 — USAC 1S 2026  
 **Carnet:** `202308204`  
 **Nombre:** `Ebed Isai Patzan Tzic`  
-**Ponderación:** 35.72 pts  
-**Tiempo Estimado:** 48 hrs/min
 
 ---
 
@@ -38,9 +36,9 @@ Antes de levantar el sistema, asegúrate de tener instalado:
 
 ---
 
-## 📸 Evidencia Visual del Proyecto
+## Evidencia Visual del Proyecto
 
-### 📸 Imagen 1: Conexión a DBeaver
+### Conexión a DBeaver
 
 ![Conexión DBeaver](./Document/img/conexionDBeaver.png)
 
@@ -48,7 +46,7 @@ Conexión exitosa al esquema EVALUACION en Oracle XE a través de DBeaver Commun
 
 ---
 
-### 📸 Imagen 2: Estructura de Tabla DEPARTAMENTOS
+### Estructura de Tabla DEPARTAMENTOS
 
 ![Tabla Departamentos](./Document/img/tablaDepartamento.png)
 
@@ -56,7 +54,7 @@ Estructura de la tabla DEPARTAMENTOS con sus columnas, tipos de datos y restricc
 
 ---
 
-### 📸 Imagen 3: Estructura de Tabla EXAMEN
+### Estructura de Tabla EXAMEN
 
 ![Tabla Examen](./Document/img/tablaExamen.png)
 
@@ -64,7 +62,7 @@ Estructura de la tabla EXAMEN con sus columnas, tipos de datos y restricciones.
 
 ---
 
-### 📸 Imagen 4: Estructura de Tabla REGISTRO
+###  Estructura de Tabla REGISTRO
 
 ![Tabla Registro](./Document/img/tablaRegistro.png)
 
@@ -72,7 +70,7 @@ Estructura de la tabla REGISTRO con sus columnas, tipos de datos y restricciones
 
 ---
 
-### 📸 Imagen 5: Modelo Relacional
+###  Modelo Relacional
 
 ![Modelo Relacional](./Document/img/modeloRelacional.png)
 
@@ -80,7 +78,7 @@ Modelo relacional de la base de datos EVALUACION con todas las tablas y sus rela
 
 ---
 
-### 📸 Imagen 6: Pruebas en Postman
+### Pruebas en Postman
 
 ![Postman](./Document/img/postman.png)
 
@@ -88,33 +86,9 @@ Colección de Postman con CRUD para todas las 12 tablas y consultas estadística
 
 ---
 
-## 📝 Seguimiento del Enunciado del Proyecto
+## Seguimiento del Enunciado del Proyecto
 
 Este proyecto sigue estrictamente las directrices del enunciado oficial de "Backend y Exposición de Servicios para la Base de Datos 'Centros de Evaluación de Manejo'". A continuación, se detallan los requisitos cumplidos:
-
-### ✅ Alcance Obligatorio
-
-| Requisito | Estado | Descripción |
-|-----------|--------|-------------|
-| **Contenerización** | ✅ Completado | Docker y Docker Compose configurados para Oracle XE |
-| **Automatización** | ✅ Completado | Scripts DDL cargados automáticamente al iniciar |
-| **Capa de Servicios** | ✅ Completado | API REST con CRUD para todas las 12 tablas |
-| **Consultas Estadísticas** | ✅ Completado | 3 endpoints específicos implementados |
-| **Validación** | ✅ Completado | Colección de Postman con todas las pruebas |
-| **Documentación** | ✅ Completado | README.md con guía completa y evidencia visual |
-
-### ✅ Requerimientos Técnicos
-
-| Tecnología | Requisito | Cumplimiento |
-|-----------|-----------|--------------|
-| **Infraestructura** | Docker y Docker Compose | ✅ Implementado |
-| **Motor de BD** | Oracle XE | ✅ Versión 21.3.0 |
-| **Administración BD** | DBeaver Community | ✅ Conexión verificada |
-| **Lenguaje** | Node.js + Express | ✅ Framework configurado |
-| **Versionamiento** | Git + GitHub | ✅ Repositorio privado con tutor |
-| **Pruebas** | Postman | ✅ Colección completa |
-
-### ✅ Entregables
 
 | Entregable | Ubicación | Descripción |
 |-----------|-----------|-------------|
@@ -136,7 +110,7 @@ git clone https://github.com/TU_USUARIO/SBD1B_1S2026_202308204.git
 cd SBD1B_1S2026_202308204
 ```
 
-### 📸 Imagen 7: Docker Compose en Ejecución
+###  Docker Compose en Ejecución
 
 ![Docker Compose](./Document/img/docker%20compose.png)
 
@@ -144,7 +118,7 @@ Contenedores Oracle XE ejecutándose correctamente con Docker Compose.
 
 ---
 
-### 📸 Imagen 8: Operación DELETE en DEPARTAMENTOS
+###  Operación DELETE en DEPARTAMENTOS
 
 ![Delete Departamento](./Document/img/delete_depa_id.png)
 
@@ -1759,110 +1733,3 @@ docker exec -it oracle-xe-evaluacion sqlplus sys as sysdba
 ```
 
 ---
-
-## ⚠️ Requisitos Críticos del Proyecto
-
-### 🔴 Penalizaciones y Consideraciones
-
-| Penalización | Porcentaje | Descripción |
-|-------------|-----------|-------------|
-| Plagio o copia total/parcial | **-100%** | Proyecto debe ser estrictamente individual |
-| Documentación similar entre estudiantes | **-20%** | Se detectará similaridad en formatos y redacciones |
-| Entrega después de fecha límite | **-100%** | Fecha de entrega: 30-04-2026 |
-| Docker no levantado en calificación | **-30%** | Sistema debe estar funcionando al iniciar |
-| Uso de BD diferente a Oracle | **-50%** | Solo se acepta Oracle XE |
-| No saber explicar el código/consultas | **-30%** | Debes dominar la lógica implementada |
-
-### ✅ Requisitos Obligatorios
-
-Para optar a calificación, debes cumplir:
-
-| Requisito | Cumplimiento | Descripción |
-|-----------|-------------|-------------|
-| **Infraestructura obligatoria** | ✅ | BD Oracle dockerizada y reproducible |
-| **Integridad de datos** | ✅ | Schema DDL cargado automáticamente |
-| **Capa de servicios** | ✅ | GitHub con tutor como colaborador + commits |
-| **Validación de endpoints** | ✅ | Evidencia Postman CRUD + consultas |
-| **Documentación y evidencia** | ✅ | README.md con pasos, DBeaver y screenshots |
-| **Originalidad** | ✅ | Proyecto individual, sin plagio |
-
----
-
-## 📋 Rúbrica de Calificación (100 pts)
-
-### Habilidades (40 pts)
-- Configuración Docker + persistencia: **10 pts**
-- Inicialización automática DDL: **5 pts**
-- Calidad de código API: **5 pts**
-- **12 endpoints CRUD completos:** **10 pts**
-- **Preguntas teóricas:** **10 pts**
-
-### Conocimiento (60 pts)
-- **Consulta 1 - Estadísticas por centro:** **10 pts**
-- **Consulta 2 - Ranking de evaluados:** **10 pts**
-- **Consulta 3 - Pregunta menor aciertos:** **10 pts**
-- **Pruebas en Postman:** **30 pts**
-
-**TOTAL: 100 puntos**
-
----
-
-## 🎓 Notas Finales de Calificación
-
-### Prerequisitos Indispensables
-
-- ✅ **Cámara y micrófono activos** durante toda la sesión de calificación
-- ✅ **Puntualidad:** Presentarse en el horario asignado por tu auxiliar
-- ✅ **Apuntarse en horarios habilitados**, no solicitar cambios injustificados
-- ✅ **Agregar tutor a GitHub:** 
-  - Auxiliar 1: `parguet`
-  - Auxiliar 2: `Tefy1317`
-
-### Cronograma del Proyecto
-
-| Etapa | Fecha Inicio | Fecha Fin |
-|-------|-------------|-----------|
-| 📌 Asignación | 15-04-2026 | 15-04-2026 |
-| 💻 Elaboración | 15-04-2026 | 30-04-2026 |
-| 🎯 Calificación | 02-05-2026 | 03-05-2026 |
-
----
-
-## ✅ Checklist Final de Entrega
-
-Antes de presentar tu proyecto, verifica:
-
-- ✅ Docker levantado con Oracle XE funcionando
-- ✅ 12 tablas creadas en la base de datos
-- ✅ 12 endpoints CRUD funcionando (5 métodos c/u)
-- ✅ 3 consultas estadísticas implementadas y probadas
-- ✅ Documentación completa con ejemplos e imágenes
-- ✅ Colección de Postman con todas las pruebas
-- ✅ API respondiendo en `http://localhost:3000`
-- ✅ Verificación en DBeaver de estructura de BD
-- ✅ Evidencia visual de endpoints en Postman
-- ✅ README.md con guía completa de despliegue
-- ✅ Tutor agregado como colaborador en GitHub
-- ✅ Commits con historial de desarrollo
-- ✅ Archivo `.env` configurado correctamente
-- ✅ Código original y sin plagio
-- ✅ **6 imágenes capturadas en `Document/img/`**
-
----
-
-## 📞 Contacto y Soporte
-
-Si tienes dudas sobre el proyecto:
-
-1. Revisa el enunciado oficial: `/Document/` (en la carpeta del proyecto)
-2. Consulta con tu auxiliar:
-   - **Auxiliar 1:** parguet
-   - **Auxiliar 2:** Tefy1317
-3. Documenta todo en GitHub con commits descriptivos
-4. Mantén el código limpio y comentado
-
----
-
-**¡Éxito en tu proyecto! 🚀**
-
-*Proyecto SBD1 - Sistemas de Bases de Datos 1 — USAC 2026*
