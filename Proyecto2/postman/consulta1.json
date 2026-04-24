@@ -1,34 +1,34 @@
 [
-  {
-    "centro": "Centro de Evaluación Antigua Guatemala",
-    "escuela": "Escuela de Manejo AutoMaster",
-    "total_examenes": 1,
-    "promedio_teorico_pct": 100,
-    "promedio_practico": 50,
-    "aprobados": 1
-  },
-  {
-    "centro": "Centro de Evaluación Escuintla",
-    "escuela": "Instituto de Conducción Segura",
-    "total_examenes": 1,
-    "promedio_teorico_pct": null,
-    "promedio_practico": null,
-    "aprobados": 0
-  },
-  {
-    "centro": "Centro de Evaluación Zona 12",
-    "escuela": "Academia Vial GuateDrive",
-    "total_examenes": 2,
-    "promedio_teorico_pct": 50,
-    "promedio_practico": 15,
-    "aprobados": 1
-  },
-  {
-    "centro": "Centro de Evaluación Zona 12",
-    "escuela": "Escuela de Manejo AutoMaster",
-    "total_examenes": 1,
-    "promedio_teorico_pct": 100,
-    "promedio_practico": 31,
-    "aprobados": 1
-  }
+    {
+        "centro": "Centro de Evaluaci��n Antigua Guatemala",
+        "escuela": "Escuela de Manejo AutoMaster",
+        "total_examenes": 1,
+        "promedio_teorico": 8,
+        "promedio_practico": 50,
+        "aprobados": 0
+    },
+    {
+        "centro": "Centro de Evaluaci��n Escuintla",
+        "escuela": "Instituto de Conducci��n Segura",
+        "total_examenes": 1,
+        "promedio_teorico": 0,
+        "promedio_practico": 0,
+        "aprobados": 0
+    },
+    {
+        "centro": "Centro de Evaluaci��n Zona 12",
+        "escuela": "Academia Vial GuateDrive",
+        "total_examenes": 2,
+        "promedio_teorico": 2,
+        "promedio_practico": 7.5,
+        "aprobados": 0
+    },
+    {
+        "centro": "Centro de Evaluaci��n Zona 12",
+        "escuela": "Escuela de Manejo AutoMaster",
+        "total_examenes": 1,
+        "promedio_teorico": 8,
+        "promedio_practico": 31,
+        "aprobados": 0
+    }
 ]

@@ -12,32 +12,33 @@ router.get('/por-centro', async (_req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute(`
-      SELECT
-        c.nombre                                    AS CENTRO,
-        e.nombre                                    AS ESCUELA,
-        COUNT(DISTINCT ex.id_examen)                AS TOTAL_EXAMENES,
-        ROUND(AVG(teorico.pct), 2)                  AS PROMEDIO_TEORICO_PCT,
-        ROUND(AVG(practico.suma_nota), 2)           AS PROMEDIO_PRACTICO,
-        SUM(CASE WHEN (NVL(teorico.pct,0) + NVL(practico.suma_nota,0)) >= 60 THEN 1 ELSE 0 END) AS APROBADOS
-      FROM EVALUACION.EXAMEN ex
-      JOIN EVALUACION.CENTRO  c ON ex.registro_id_centro  = c.id_centro
-      JOIN EVALUACION.ESCUELA e ON ex.registro_id_escuela = e.id_escuela
-      LEFT JOIN (
+      WITH teorico AS (
         SELECT
           ru.examen_id_examen,
-          ROUND(
-            SUM(CASE WHEN ru.respuesta = p.respuesta_correcta THEN 1 ELSE 0 END) * 100.0
-            / NULLIF(COUNT(*), 0), 2
-          ) AS pct
+          SUM(CASE WHEN ru.respuesta = p.respuesta_correcta THEN 4 ELSE 0 END) AS puntaje_teorico
         FROM EVALUACION.RESPUESTA_USUARIO ru
         JOIN EVALUACION.PREGUNTAS p ON p.id_pregunta = ru.pregunta_id_pregunta
         GROUP BY ru.examen_id_examen
-      ) teorico ON teorico.examen_id_examen = ex.id_examen
-      LEFT JOIN (
-        SELECT examen_id_examen, SUM(nota) AS suma_nota
+      ),
+      practico AS (
+        SELECT
+          examen_id_examen,
+          SUM(nota) AS puntaje_practico
         FROM EVALUACION.RESPUESTA_PRACTICO_USUARIO
         GROUP BY examen_id_examen
-      ) practico ON practico.examen_id_examen = ex.id_examen
+      )
+      SELECT
+        c.nombre AS CENTRO,
+        e.nombre AS ESCUELA,
+        COUNT(*) AS TOTAL_EXAMENES,
+        ROUND(AVG(NVL(t.puntaje_teorico, 0)), 2) AS PROMEDIO_TEORICO,
+        ROUND(AVG(NVL(pr.puntaje_practico, 0)), 2) AS PROMEDIO_PRACTICO,
+        SUM(CASE WHEN (NVL(t.puntaje_teorico, 0) + NVL(pr.puntaje_practico, 0)) >= 70 THEN 1 ELSE 0 END) AS APROBADOS
+      FROM EVALUACION.EXAMEN ex
+      JOIN EVALUACION.CENTRO c ON c.id_centro = ex.registro_id_centro
+      JOIN EVALUACION.ESCUELA e ON e.id_escuela = ex.registro_id_escuela
+      LEFT JOIN teorico t ON t.examen_id_examen = ex.id_examen
+      LEFT JOIN practico pr ON pr.examen_id_examen = ex.id_examen
       GROUP BY c.nombre, e.nombre
       ORDER BY c.nombre, e.nombre
     `);
@@ -47,7 +48,7 @@ router.get('/por-centro', async (_req, res) => {
       centro: row[0],
       escuela: row[1],
       total_examenes: row[2],
-      promedio_teorico_pct: row[3],
+      promedio_teorico: row[3],
       promedio_practico: row[4],
       aprobados: row[5]
     }));
@@ -66,35 +67,35 @@ router.get('/ranking', async (_req, res) => {
   try {
     conn = await getConnection();
     const r = await conn.execute(`
+      WITH teorico AS (
+        SELECT
+          ru.examen_id_examen,
+          SUM(CASE WHEN ru.respuesta = p.respuesta_correcta THEN 4 ELSE 0 END) AS puntaje_teorico
+        FROM EVALUACION.RESPUESTA_USUARIO ru
+        JOIN EVALUACION.PREGUNTAS p ON p.id_pregunta = ru.pregunta_id_pregunta
+        GROUP BY ru.examen_id_examen
+      ),
+      practico AS (
+        SELECT
+          examen_id_examen,
+          SUM(nota) AS puntaje_practico
+        FROM EVALUACION.RESPUESTA_PRACTICO_USUARIO
+        GROUP BY examen_id_examen
+      )
       SELECT
-        RANK() OVER (ORDER BY (puntaje_teorico + puntaje_practico) DESC) AS RANKING,
-        nombre_completo,
-        ROUND(puntaje_teorico, 2)                            AS PUNTAJE_TEORICO,
-        ROUND(puntaje_practico, 2)                           AS PUNTAJE_PRACTICO,
-        ROUND(puntaje_teorico + puntaje_practico, 2)         AS PUNTAJE_TOTAL,
+        RANK() OVER (ORDER BY (NVL(t.puntaje_teorico, 0) + NVL(pr.puntaje_practico, 0)) DESC) AS RANKING,
+        reg.nombre_completo,
+        ROUND(NVL(t.puntaje_teorico, 0), 2)                  AS PUNTAJE_TEORICO,
+        ROUND(NVL(pr.puntaje_practico, 0), 2)                AS PUNTAJE_PRACTICO,
+        ROUND(NVL(t.puntaje_teorico, 0) + NVL(pr.puntaje_practico, 0), 2) AS PUNTAJE_TOTAL,
         CASE
-          WHEN (puntaje_teorico + puntaje_practico) >= 60 THEN 'APROBADO'
+          WHEN (NVL(t.puntaje_teorico, 0) + NVL(pr.puntaje_practico, 0)) >= 70 THEN 'APROBADO'
           ELSE 'REPROBADO'
         END                                                  AS RESULTADO
-      FROM (
-        SELECT
-          reg.nombre_completo,
-          NVL((
-            SELECT ROUND(
-              SUM(CASE WHEN ru.respuesta = p.respuesta_correcta THEN 1 ELSE 0 END) * 100.0
-              / NULLIF(COUNT(*), 0), 2)
-            FROM EVALUACION.RESPUESTA_USUARIO ru
-            JOIN EVALUACION.PREGUNTAS p ON p.id_pregunta = ru.pregunta_id_pregunta
-            WHERE ru.examen_id_examen = ex.id_examen
-          ), 0) AS puntaje_teorico,
-          NVL((
-            SELECT SUM(nota)
-            FROM EVALUACION.RESPUESTA_PRACTICO_USUARIO
-            WHERE examen_id_examen = ex.id_examen
-          ), 0) AS puntaje_practico
-        FROM EVALUACION.REGISTRO reg
-        JOIN EVALUACION.EXAMEN ex ON ex.registro_id_registro = reg.id_registro
-      )
+      FROM EVALUACION.EXAMEN ex
+      JOIN EVALUACION.REGISTRO reg ON reg.id_registro = ex.registro_id_registro
+      LEFT JOIN teorico t ON t.examen_id_examen = ex.id_examen
+      LEFT JOIN practico pr ON pr.examen_id_examen = ex.id_examen
       ORDER BY RANKING
     `);
     

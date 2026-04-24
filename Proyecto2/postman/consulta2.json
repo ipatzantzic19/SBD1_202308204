@@ -1,42 +1,42 @@
 [
-  {
-    "ranking": 1,
-    "nombre_completo": "María Elena Rodríguez Morales",
-    "puntaje_teorico": 100,
-    "puntaje_practico": 50,
-    "puntaje_total": 150,
-    "resultado": "APROBADO"
-  },
-  {
-    "ranking": 2,
-    "nombre_completo": "Juan Carlos López García",
-    "puntaje_teorico": 100,
-    "puntaje_practico": 31,
-    "puntaje_total": 131,
-    "resultado": "APROBADO"
-  },
-  {
-    "ranking": 3,
-    "nombre_completo": "Carlos Alberto Méndez Castillo",
-    "puntaje_teorico": 50,
-    "puntaje_practico": 15,
-    "puntaje_total": 65,
-    "resultado": "APROBADO"
-  },
-  {
-    "ranking": 4,
-    "nombre_completo": "Ana Sofía Guerrero Díaz",
-    "puntaje_teorico": 0,
-    "puntaje_practico": 0,
-    "puntaje_total": 0,
-    "resultado": "REPROBADO"
-  },
-  {
-    "ranking": 4,
-    "nombre_completo": "Pedro José Hernández Ruiz",
-    "puntaje_teorico": 0,
-    "puntaje_practico": 0,
-    "puntaje_total": 0,
-    "resultado": "REPROBADO"
-  }
+    {
+        "ranking": 1,
+        "nombre_completo": "Mar��a Elena Rodr��guez Morales",
+        "puntaje_teorico": 8,
+        "puntaje_practico": 50,
+        "puntaje_total": 58,
+        "resultado": "REPROBADO"
+    },
+    {
+        "ranking": 2,
+        "nombre_completo": "Juan Carlos L��pez Garc��a",
+        "puntaje_teorico": 8,
+        "puntaje_practico": 31,
+        "puntaje_total": 39,
+        "resultado": "REPROBADO"
+    },
+    {
+        "ranking": 3,
+        "nombre_completo": "Carlos Alberto M��ndez Castillo",
+        "puntaje_teorico": 4,
+        "puntaje_practico": 15,
+        "puntaje_total": 19,
+        "resultado": "REPROBADO"
+    },
+    {
+        "ranking": 4,
+        "nombre_completo": "Ana Sof��a Guerrero D��az",
+        "puntaje_teorico": 0,
+        "puntaje_practico": 0,
+        "puntaje_total": 0,
+        "resultado": "REPROBADO"
+    },
+    {
+        "ranking": 4,
+        "nombre_completo": "Pedro Jos�� Hern��ndez Ruiz",
+        "puntaje_teorico": 0,
+        "puntaje_practico": 0,
+        "puntaje_total": 0,
+        "resultado": "REPROBADO"
+    }
 ]
